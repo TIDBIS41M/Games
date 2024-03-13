@@ -6,6 +6,7 @@ export default async function Home() {
   const steamUrl = "http://10.100.1.50:3000/steam"
   const xboxUrl = "http://10.100.0.180:3000/xbox"
   const psUrl = "http://10.100.1.50:3001/ps"
+  const nintendoUrl = ""
 
   
   const responseSteam = await fetch(steamUrl, {

@@ -3,14 +3,45 @@ import NavBar from "./components/NavBar";
 import GameCard from "./components/GameCard";
 
 export default async function Home() {
-  const response = await fetch("http://10.100.1.94:3000/steam", {
+  
+  const responseSteam = await fetch("http://10.100.1.94:3000/steam", {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   });
 
-  const games = await response.json()
+  const gamesSteam = await responseSteam.json()
+  
+  const responseNintendo = await fetch("http://10.100.1.94:3000/steam", {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const gamesNintendo = await responseNintendo.json()
+
+  const responsePlay = await fetch("http://10.100.1.94:3000/steam", {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const gamesPlay = await responsePlay.json()
+
+  const responseXbox = await fetch("http://10.100.1.94:3000/steam", {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const gamesXbox = await responseXbox.json()
+
+  const games = [...gamesSteam, ...gamesNintendo, ...gamesPlay, ...gamesXbox]; 
+
   return (
     <main className="grid grid-cols-1 max-h-max p-24">
       <div className="flex justify-center space-x-4 grid-flow-col w-full h-full">
@@ -27,8 +58,8 @@ export default async function Home() {
         </div>
       </div>
       <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-2 gap-3 mt-10">
-        {games.map((game) => (
-          <GameCard game={game} key={game.id_juego} />
+        {games.map((game, index) => (
+          <GameCard game={game} key={index}/>
         ))}
 
       </div>

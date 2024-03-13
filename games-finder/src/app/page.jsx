@@ -3,8 +3,12 @@ import NavBar from "./components/NavBar";
 import GameCard from "./components/GameCard";
 
 export default async function Home() {
+  const steamUrl = "http://10.100.1.50:3000/steam"
+  const xboxUrl = "http://10.100.0.180:3000/xbox"
+  const psUrl = "http://10.100.1.50:3001/ps"
+
   
-  const responseSteam = await fetch("http://10.100.1.94:3000/steam", {
+  const responseSteam = await fetch(steamUrl, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -12,8 +16,11 @@ export default async function Home() {
   });
 
   const gamesSteam = await responseSteam.json()
+  gamesSteam.forEach((game) => {
+    game.company  = "Steam"
+  })
   
-  const responseNintendo = await fetch("http://10.100.1.94:3000/steam", {
+  const responseNintendo = await fetch(steamUrl, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -21,8 +28,11 @@ export default async function Home() {
   });
 
   const gamesNintendo = await responseNintendo.json()
+  gamesNintendo.forEach((game) => {
+    game.company  = "Nintendo"
+  })
 
-  const responsePlay = await fetch("http://10.100.1.94:3000/steam", {
+  const responsePlay = await fetch(psUrl, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -30,8 +40,11 @@ export default async function Home() {
   });
 
   const gamesPlay = await responsePlay.json()
+  gamesPlay.forEach((game) => {
+    game.company  = "PlayStation"
+  })
 
-  const responseXbox = await fetch("http://10.100.1.94:3000/steam", {
+  const responseXbox = await fetch(xboxUrl, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -39,6 +52,9 @@ export default async function Home() {
   });
 
   const gamesXbox = await responseXbox.json()
+  gamesXbox.forEach((game) => {
+    game.company  = "Xbox"
+  })
 
   const games = [...gamesSteam, ...gamesNintendo, ...gamesPlay, ...gamesXbox]; 
 

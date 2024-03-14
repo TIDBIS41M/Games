@@ -63,26 +63,26 @@ export default async function Home() {
 
   const games = [...gamesSteam, ...gamesNintendo, ...gamesPlay, ...gamesXbox]; 
   return (
-    <main className="grid py-5">
+    <main className="grid w-full h-screen py-5">
       <div className="grid grid-cols-2 justify-end items-center grid-flow-col ">
-        <div className="h-3/4 text-left text-[4rem] items-center pl-32 bg-[url('/images/purpleblur.png')] bg-top bg-no-repeat max-lg:text-center text-blue-200">Universe of games, at the tap of your finger
+        <div className="h-3/4 text-left text-[4rem] items-center pl-20 bg-[url('/images/purpleblur.png')] bg-top bg-no-repeat text-blue-200">Universe of games, at the tap of your finger
         </div>
-        <div className="grid-flow-row absolute translate-x-96 -z-50">
+        <div className="grid grid-flow-row absolute -z-10">
           <div className="">
-            <img src="/images/greenblur.png" alt="" className="w-1/3 translate-x-64 -translate-y-8" />
+            <img src="/images/greenblur.png" alt="" className="w-1/3 translate-x-[40rem] -translate-y-8" />
           </div>
           <div className="flex">
-            <img src="/images/redblur (1).png" alt="" className="w-1/3 translate-x-44 -translate-y-36"/>
-            <img src="/images/Blue-Glow-Transparent.png" alt="" className="w-1/3 -translate-y-36"/>
+            <img src="/images/redblur (1).png" alt="" className="w-1/3 translate-x-[35rem] -translate-y-36"/>
+            <img src="/images/Blue-Glow-Transparent.png" alt="" className="w-1/3 translate-x-[25rem] -translate-y-36"/>
           </div>
         </div>
         <div className="w-full">
-          <Image
+          <img
             src="/images/HologramLGirl2.png"
             width={200}
             height={200}
             alt="HoloGirl"
-            className="w-full"
+            className="w-10/12"
           />
         </div>
         

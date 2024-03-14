@@ -3,10 +3,10 @@ import NavBar from "./components/NavBar";
 import GameCard from "./components/GameCard";
 
 export default async function Home() {
-  const steamUrl = "http://10.100.1.50:3000/steam"
-  const xboxUrl = "http://10.100.0.180:3000/xbox"
-  const psUrl = "http://10.100.1.50:3001/ps"
-  const nintendoUrl = ""
+  const steamUrl = "http://10.100.1.60:3000/nintendo"
+  const xboxUrl = "http://10.100.1.60:3000/nintendo"
+  const psUrl = "10.100.1.60:3000/nintendo"
+  const nintendoUrl = "http://10.100.1.60:3000/nintendo"
 
   
   const responseSteam = await fetch(steamUrl, {

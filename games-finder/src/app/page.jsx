@@ -89,9 +89,7 @@ export default async function Home() {
         <h1 class="text-[47px] text-white font-bold text-center mb-[140px]" >Explore Our Featured Platforms</h1>
         <div class="flex justify-evenly items-center bg-[#292929ff] rounded-[20px] h-[183px] ml-[15px] mr-[15px]">        
             <div class="flex justify-center items-center w-[250px] h-[320px] rounded-[34px]
-                        bg-gradient-to-t from-[#b3b3b3ff] to-[#fff]
-                        ">
-                        
+                        bg-gradient-to-t from-[#b3b3b3ff] to-[#fff]">                      
                 <img class="max-w-max max-h-max logo" src="/images/playstation.png"/>
             </div>
             <div class="flex justify-center items-center w-[250px] h-[320px] rounded-[34px]

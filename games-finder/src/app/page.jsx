@@ -19,6 +19,7 @@ export default async function Home() {
   const gamesSteam = await responseSteam.json()
   gamesSteam.forEach((game) => {
     game.company  = "Steam"
+    game.logo = "/images/steam.jpg"
   })
   
   const responseNintendo = await fetch(steamUrl, {
@@ -31,6 +32,7 @@ export default async function Home() {
   const gamesNintendo = await responseNintendo.json()
   gamesNintendo.forEach((game) => {
     game.company  = "Nintendo"
+    game.logo = "/images/Nintendo.jpg"
   })
 
   const responsePlay = await fetch(psUrl, {
@@ -43,6 +45,7 @@ export default async function Home() {
   const gamesPlay = await responsePlay.json()
   gamesPlay.forEach((game) => {
     game.company  = "PlayStation"
+    game.logo = "/images/ps.jpg"
   })
 
   const responseXbox = await fetch(xboxUrl, {
@@ -55,6 +58,7 @@ export default async function Home() {
   const gamesXbox = await responseXbox.json()
   gamesXbox.forEach((game) => {
     game.company  = "Xbox"
+    game.logo = "/images/xbox.jpg"
   })
 
   const games = [...gamesSteam, ...gamesNintendo, ...gamesPlay, ...gamesXbox]; 

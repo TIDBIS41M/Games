@@ -28,9 +28,24 @@ function generateStarImages(rate) {
   return starImages;
 }
 function GameCard({ game }) {
-    
+
+  const getShadow = (company) => {
+    switch (company) {
+      case 'Nintendo':
+        return 'shadow-nintendo';
+      case 'PlayStation':
+        return 'shadow-playstation';
+      case 'Xbox':
+        return 'shadow-xbox';
+      case 'Steam':
+        return 'shadow-steam';
+      default:
+        return 'shadow';
+    }
+  };
+
   return (
-    <div className="text-center transition-all duration-500 ease-in-out rounded-3xl shadow-lg shadow-black hover:scale-105 bg-gray-900 p-1 hover:cursor-pointer hover:text-white justify-center relative">
+    <div className={`text-center transition-all duration-500 ease-in-out rounded-3xl hover:scale-105 bg-gray-900 p-1 hover:cursor-pointer hover:text-white justify-center relative ${getShadow(game.company)} shadow`}>
       <div className="relative">
         <img 
           src={game.image}

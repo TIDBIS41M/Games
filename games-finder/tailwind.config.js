@@ -18,6 +18,9 @@ module.exports = {
         xbox: '0px 0px 14px 4px rgba(60, 230, 120, 0.4), 0 0px 8px 2px rgba(52, 211, 153, 0.06)',
         steam: '0px 0px 14px 4px rgba(59, 130, 246, 0.4), 0 0px 8px 2px rgba(59, 130, 246, 0.06)',
       },
+      colors:{
+        cardBg: '#212121FF'
+      }
     },
   },
 };

@@ -5,7 +5,7 @@ import GameCard from "./components/GameCard";
 export default async function Home() {
   const steamUrl = "http://10.100.1.60:3000/nintendo"
   const xboxUrl = "http://10.100.1.60:3000/nintendo"
-  const psUrl = "10.100.1.60:3000/nintendo"
+  const psUrl = "http://10.100.1.60:3000/nintendo"
   const nintendoUrl = "http://10.100.1.60:3000/nintendo"
 
   
@@ -77,7 +77,7 @@ export default async function Home() {
           />
         </div>
       </div>
-      <section>
+      <section className="mt-10 mb-10" >
         <h1 class="text-[45px] text-center mb-[140px]" >Explore Our Featured Platforms</h1>
         <div class="flex justify-evenly items-center bg-[#292929ff] rounded-[20px] h-[180px]">
             
@@ -97,6 +97,14 @@ export default async function Home() {
                         bg-gradient-to-t from-[#093153ff] to-[#1077d2ff]">
                 <img class="max-w-max max-h-max" src="/images/steam.png"/>
             </div>
+        </div>
+      </section>
+      <section className="mt-10">
+        <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-2 gap-3 mt-10">
+          {games.map((game, index) => (
+            <GameCard game={game} key={game}/>
+          ))}
+
         </div>
       </section>
     </main>

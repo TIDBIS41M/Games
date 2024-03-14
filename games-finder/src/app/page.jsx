@@ -1,48 +1,121 @@
 import Image from "next/image";
 import NavBar from "./components/NavBar";
+import GameCard from "./components/GameCard";
 
-export default function Home() {
+export default async function Home() {
+  const steamUrl = "http://10.100.1.60:3000/nintendo"
+  const xboxUrl = "http://10.100.1.60:3000/nintendo"
+  const psUrl = "http://10.100.1.60:3000/nintendo"
+  const nintendoUrl = "http://10.100.1.60:3000/nintendo"
+
+  
+  const responseSteam = await fetch(steamUrl, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const gamesSteam = await responseSteam.json()
+  gamesSteam.forEach((game) => {
+    game.company  = "Steam"
+    game.logo = "/images/steam.jpg"
+  })
+  
+  const responseNintendo = await fetch(steamUrl, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const gamesNintendo = await responseNintendo.json()
+  gamesNintendo.forEach((game) => {
+    game.company  = "Nintendo"
+    game.logo = "/images/Nintendo.jpg"
+  })
+
+  const responsePlay = await fetch(psUrl, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const gamesPlay = await responsePlay.json()
+  gamesPlay.forEach((game) => {
+    game.company  = "PlayStation"
+    game.logo = "/images/ps.jpg"
+  })
+
+  const responseXbox = await fetch(xboxUrl, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const gamesXbox = await responseXbox.json()
+  gamesXbox.forEach((game) => {
+    game.company  = "Xbox"
+    game.logo = "/images/xbox.jpg"
+  })
+
+  const games = [...gamesSteam, ...gamesNintendo, ...gamesPlay, ...gamesXbox]; 
   return (
-    <main className="grid w-full md:max-h-max py-5">
-      <div className="flex lg:grid-cols-2 justify-center items-center mx-auto grid-flow-col w-full h-full">
-        <div className="lg:w-1/2 max-md:w-full max-md:h-96 flex text-left text-8xl h-full items-center pl-5 bg-[url('/images/purpleblur.png')] bg-center bg-no-repeat max-lg:text-center text-blue-200">Universe of games, at the tap of your finger
+    <main className="grid py-5">
+      <div className="grid grid-cols-2 justify-end items-center grid-flow-col ">
+        <div className="h-3/4 text-left text-[4rem] items-center pl-32 bg-[url('/images/purpleblur.png')] bg-top bg-no-repeat max-lg:text-center text-blue-200">Universe of games, at the tap of your finger
         </div>
-        <div className=" grid grid-flow-row absolute w-10/12 -z-50">
-          <div className="w-5/12 mx-auto translate-x-56 -translate-y-16">
-            <img src="/images/greenblur.png" alt="" />
+        <div className="grid-flow-row absolute translate-x-96 -z-50">
+          <div className="">
+            <img src="/images/greenblur.png" alt="" className="w-1/3 translate-x-64 -translate-y-8" />
           </div>
-          <div className="flex w-1/3 translate-x-96">
-            <img src="/images/redblur (1).png" alt="" className="flex -translate-y-36 translate-x-14"/>
-            <img src="/images/Blue-Glow-Transparent.png" alt="" className=" -translate-y-24 translate-x-9" />
+          <div className="flex">
+            <img src="/images/redblur (1).png" alt="" className="w-1/3 translate-x-44 -translate-y-36"/>
+            <img src="/images/Blue-Glow-Transparent.png" alt="" className="w-1/3 -translate-y-36"/>
           </div>
         </div>
-        <div className="flex translate-x-28 lg:w-2/3 max-md:w-full text-right">
+        <div className="w-full">
           <Image
             src="/images/HologramLGirl2.png"
             width={200}
             height={200}
             alt="HoloGirl"
-            className=" flex mx-auto justify-center items-end w-9/12"
+            className="w-full"
           />
         </div>
         
       </div>
+      <section className="mt-10 mb-10" >
+        <h1 class="text-[45px] text-center mb-[140px]" >Explore Our Featured Platforms</h1>
+        <div class="flex justify-evenly items-center bg-[#292929ff] rounded-[20px] h-[180px]">
+            
+            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
+                        bg-gradient-to-t from-[#b3b3b3ff] to-[#fff]">
+                <img class="max-w-max max-h-max logo" src="/images/playstation.png"/>
+            </div>
+            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
+                        bg-gradient-to-t from-[#067706ff] to-[#0ab90aff]">
+                <img class="max-w-max max-h-max logo" src="/images/xbox.png"/>
+            </div>
+            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
+                        bg-gradient-to-t from-[#820505ff] to-[#ff0000ff]">                                           
+                <img class="max-w-max max-h-max logo" src="/images/nintendo.png"/>
+            </div>
+            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
+                        bg-gradient-to-t from-[#093153ff] to-[#1077d2ff]">
+                <img class="max-w-max max-h-max" src="/images/steam.png"/>
+            </div>
+        </div>
+      </section>
+      <section className="mt-10">
+        <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-2 gap-3 mt-10">
+          {games.map((game, index) => (
+            <GameCard game={game} key={game}/>
+          ))}
 
-      
-      
-      <section>
-        <div>
-          <img src="" alt="" />
-          </div>
-        <div>
-          <img src="" alt="" />
-          </div>
-        <div>
-          <img src="" alt="" />
-          </div>
-        <div>
-          <img src="" alt="" />
-          </div>
+        </div>
       </section>
       <NavBar/>
     </main>

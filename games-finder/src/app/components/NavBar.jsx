@@ -3,8 +3,8 @@ import Image from "next/image";
 async function NavBar() {
   
   return (
-    <div className="flex text-poppins items-center mx-auto justify-center rounded-full w-1/4 bg-gray-800 text-white lg:w-3/12 max-lg:px-4 px-4 py-1 fixed lg:translate-x-[28rem] max-md:translate-x-24 translate-y-[30rem] md:translate-x-0 max-sm:-translate-x-4 max-sm:translate-y-[49rem] shadow-lg shadow-gray-600">
-        <ul className="flex justify-around w-full items-center">
+    <div className="fixed translate-x-[475px] translate-y-[470px] w-full">
+        <ul className="grid grid-flow-col rounded-xl w-3/12 justify-around items-center bg-neutral-600 ">
             <li>
               <button className="m-2 size-16 align-middle rounded-full bg-gray-900 p-5 border-neutral-950 hover:size-20 duration-500 transition-all hover:-translate-y-2 hover:shadow-lg hover:shadow-purple-600">
                 <Image
@@ -50,7 +50,7 @@ async function NavBar() {
               </button>
             </li>
         </ul>
-    </div>
+      </div>
   );
 }
 

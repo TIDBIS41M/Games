@@ -3,7 +3,7 @@ import Image from "next/image";
 async function NavBar() {
   
   return (
-    <div className="fixed translate-y-[400px] w-full flex justify-center items-center">
+    <div className="fixed z-50 translate-y-[400px] w-full flex justify-center items-center">
       <ul className="flex rounded-full justify-between items-center h-20 bg-[#303030] ">
         <li>
           <button className="m-2 size-16 align-middle rounded-full bg-[#434343ff] p-5 border-neutral-950 hover:size-20 duration-500 transition-all hover:-translate-y-3 hover:shadow-lg hover:shadow-purple-600 ">

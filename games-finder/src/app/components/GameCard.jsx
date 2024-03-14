@@ -1,8 +1,34 @@
 import React from 'react'
-import Image from 'next/image'
-
+function generateStarImages(rate) {
+  const totalStars = 5; // Total de estrellas
+  const starImages = [];
+  for (let i = 1; i <= totalStars; i++) {
+    // Agregar estrella completa si la puntuación es mayor o igual a i
+    if (i <= rate) {
+      starImages.push(
+        <img
+          key={i}
+          src="/images/estrella.png" // Ruta de la imagen de la estrella llena
+          alt="star-filled"
+          className="w-6 h-6"
+        />
+      );
+    } else {
+      // Agregar estrella vacía si la puntuación es menor a i
+      starImages.push(
+        <img
+          key={i}
+          src="/images/estrellaVacia.png" // Ruta de la imagen de la estrella vacía
+          alt="star-empty"
+          className="w-6 h-6"
+        />
+      );
+    }
+  }
+  return starImages;
+}
 function GameCard({ game }) {
-    console.log(game)
+    
   return (
     <div className="text-center transition-all duration-500 ease-in-out rounded-3xl shadow-lg shadow-black hover:scale-105 bg-gray-900 p-1 hover:cursor-pointer hover:text-white justify-center relative">
       <div className="relative">
@@ -20,9 +46,17 @@ function GameCard({ game }) {
           style={{ width: '130px', height: '38px' }} // Ajusta el tamaño del logo según tus necesidades
         />  
       </div>
-      <div className='justify-center  bottom-0 left-0 p-4'>
-        <h3 className="font-bold text-3xl mb-2">{game.name}</h3>
-        <h3 className="font-semibold text-xl mb-2">${game.price}</h3>
+      <div className='flex-col justify-between h-[100px] '>
+        <div>
+          <h3 className="font-bold text-xl">{game.name}</h3>
+        </div>
+        <div className="absolute bottom-0 left-0 w-full mt-4  mb-3">
+          <h3 className="font-semibold text-xl text-left pl-4">${game.price}</h3>
+          <div className="flex items-center absolute bottom-0 right-0 mt-4 mr-4">
+            {generateStarImages(game.rate)}
+          </div>
+        </div>
+        
       </div>
     </div>
   )

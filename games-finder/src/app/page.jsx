@@ -87,29 +87,31 @@ export default async function Home() {
         
       </div>
       <section className="mt-10 mb-10" >
-        <h1 class="text-[45px] text-center mb-[140px] mt-7" >Explore Our Featured Platforms</h1>
-        <div class="flex justify-evenly items-center  bg-[#292929ff] bg-no-repeat rounded-[20px] h-[180px]">
-            
-            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
-                        bg-gradient-to-t from-[#b3b3b3ff] to-[#fff]">
+        <h1 class="text-[47px] text-white font-bold text-center mb-[140px] mt-7" >Explore Our Featured Platforms</h1>
+        <div class="flex justify-evenly items-center  bg-[#292929ff] bg-no-repeat rounded-[20px] h-[183px] ml-[15px] mr-[15px]">        
+            <div class="flex justify-center items-center w-[250px] h-[320px] rounded-[34px]
+                        bg-gradient-to-t from-[#b3b3b3ff] to-[#fff]
+                        ">
+                        
                 <img class="max-w-max max-h-max logo" src="/images/playstation.png"/>
             </div>
-            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
+            <div class="flex justify-center items-center w-[250px] h-[320px] rounded-[34px]
                         bg-gradient-to-t from-[#067706ff] to-[#0ab90aff]">
                 <img class="max-w-max max-h-max logo" src="/images/xbox.png"/>
             </div>
-            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
+            <div class="flex justify-center items-center w-[250px] h-[320px] rounded-[34px]
                         bg-gradient-to-t from-[#820505ff] to-[#ff0000ff]">                                           
                 <img class="max-w-max max-h-max logo" src="/images/nintendo.png"/>
             </div>
-            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
+            <div class="flex justify-center items-center w-[250px] h-[320px] rounded-[34px]
                         bg-gradient-to-t from-[#093153ff] to-[#1077d2ff]">
                 <img class="max-w-max max-h-max" src="/images/steam.png"/>
             </div>
         </div>
       </section>
+
       <section className="mt-10">
-        <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-4 gap-8 mt-10">
+        <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-4 gap-12 mt-10 mx-12">
           {games.map((game, index) => (
             <GameCard game={game} key={game}/>
           ))}

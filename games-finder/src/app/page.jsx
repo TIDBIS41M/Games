@@ -3,10 +3,10 @@ import NavBar from "./components/NavBar";
 import GameCard from "./components/GameCard";
 
 export default async function Home() {
-  const steamUrl = "http://10.100.1.50:3000/steam"
-  const xboxUrl = "http://10.100.0.180:3000/xbox"
-  const psUrl = "http://10.100.1.50:3001/ps"
-  const nintendoUrl = ""
+  const steamUrl = "http://10.100.1.60:3000/nintendo"
+  const xboxUrl = "http://10.100.1.60:3000/nintendo"
+  const psUrl = "10.100.1.60:3000/nintendo"
+  const nintendoUrl = "http://10.100.1.60:3000/nintendo"
 
   
   const responseSteam = await fetch(steamUrl, {
@@ -62,7 +62,6 @@ export default async function Home() {
   })
 
   const games = [...gamesSteam, ...gamesNintendo, ...gamesPlay, ...gamesXbox]; 
-
   return (
     <main className="grid grid-cols-1 max-h-max p-24">
       <div className="flex justify-center space-x-4 grid-flow-col w-full h-full">
@@ -78,13 +77,28 @@ export default async function Home() {
           />
         </div>
       </div>
-      <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-2 gap-3 mt-10">
-        {games.map((game, index) => (
-          <GameCard game={game} key={index}/>
-        ))}
-
-      </div>
-      <NavBar/>
+      <section>
+        <h1 class="text-[45px] text-center mb-[140px]" >Explore Our Featured Platforms</h1>
+        <div class="flex justify-evenly items-center bg-[#292929ff] rounded-[20px] h-[180px]">
+            
+            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
+                        bg-gradient-to-t from-[#b3b3b3ff] to-[#fff]">
+                <img class="max-w-max max-h-max logo" src="/images/playstation.png"/>
+            </div>
+            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
+                        bg-gradient-to-t from-[#067706ff] to-[#0ab90aff]">
+                <img class="max-w-max max-h-max logo" src="/images/xbox.png"/>
+            </div>
+            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
+                        bg-gradient-to-t from-[#820505ff] to-[#ff0000ff]">                                           
+                <img class="max-w-max max-h-max logo" src="/images/nintendo.png"/>
+            </div>
+            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
+                        bg-gradient-to-t from-[#093153ff] to-[#1077d2ff]">
+                <img class="max-w-max max-h-max" src="/images/steam.png"/>
+            </div>
+        </div>
+      </section>
     </main>
   );
 }

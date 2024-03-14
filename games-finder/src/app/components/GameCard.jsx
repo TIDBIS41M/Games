@@ -30,7 +30,7 @@ function generateStarImages(rate) {
 function GameCard({ game }) {
     
   return (
-    <div className="text-center transition-all duration-500 ease-in-out rounded-3xl shadow-lg shadow-black hover:scale-105 bg-gray-900 p-1 hover:cursor-pointer hover:text-white justify-center relative">
+    <div className="text-center transition-all duration-500 ease-in-out rounded-3xl shadow-lg shadow-black hover:scale-105 p-1 hover:cursor-pointer hover:text-white justify-center relative">
       <div className="relative">
         <img 
           src={game.image}

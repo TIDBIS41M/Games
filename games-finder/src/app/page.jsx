@@ -100,7 +100,7 @@ export default async function Home() {
         </div>
       </section>
       <section className="mt-10">
-        <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-2 gap-3 mt-10">
+        <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-4 gap-8 mt-10">
           {games.map((game, index) => (
             <GameCard game={game} key={game}/>
           ))}

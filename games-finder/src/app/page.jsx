@@ -1,5 +1,3 @@
-import Image from "next/image";
-import NavBar from "./components/NavBar";
 import GameCard from "./components/GameCard";
 
 export default async function Home() {
@@ -129,7 +127,6 @@ export default async function Home() {
 
         </div>
       </section>
-      <NavBar/>
     </main>
   );
 }

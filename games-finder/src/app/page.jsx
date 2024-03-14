@@ -62,7 +62,7 @@ export default async function Home() {
     
     <main className=" max-h-max items-center justify-center mx-auto p-4">
 
-    <header className="flex mt-0 mb-4 justify-center items-center bg bg-gray-950 p-6 text-2xl font-semibold">
+    <header className="flex mt-0 mb-4 justify-center items-center bg bg-neutral p-6 text-2xl font-semibold">
     <div className="flex items-center gap-x-2">
         <Image
             src= "/images/HeadMashUpW.png"

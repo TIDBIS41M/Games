@@ -61,7 +61,7 @@ export default async function Home() {
 
   const games = [...gamesSteam, ...gamesNintendo, ...gamesPlay, ...gamesXbox]; 
   return (
-    <main className="grid w-full px-10 pt-36 bg-[#1c1c1c] bg-no-repeat">
+    <main className="grid w-full  pt-36 bg-[#1c1c1c] bg-no-repeat">
       <div className="grid grid-cols-2 justify-end items-center h-full grid-flow-col ">
         <div className="flex h-full text-left text-[4rem] items-center justify-center pl-20 bg-[url('/images/purpleblur.png')] bg-cover bg-center bg-no-repeat text-white">
           <p className="text-center">Universe of games, at the tap of your finger</p>
@@ -115,7 +115,43 @@ export default async function Home() {
             </div>
         </div>
       </section>
-
+  <section>
+    <img src="/images/GamesTag.png" alt="Games" class="w-full h-full object-cover"></img>
+    <div class="w-full flex justify-center">
+      <h2
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        Explore Our Game Catalogue
+      </h2>
+    </div>
+    <br></br>
+    <form class="flex items-center max-w-screen-lg mx-auto">
+      <button type="submit"
+        class="p-2.5 text-sm font-medium text-white bg-black rounded-full border border-black hover:bg-black dark:bg-black dark:hover:bg-black mx-2  hover:shadow-purple-600 hover:shadow-ste">
+        <img src="/images/tres.png" alt="dados" class="w-6 h-6"></img>
+      </button>
+      <span class="sr-only">Dados</span>
+      <label for="simple-search" class="sr-only">Search</label>
+      <div class="relative w-full">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+         <img src="/images/lupa gris.png" alt="dados" class="w-6 h-6"/>
+        </div>
+        <input type="text" id="simple-search"
+          class="bg-purple-50 border border-purple-300 text-gray-900 text-sm rounded-full focus:ring-purple-500 focus:border-purple-500 block w-full ps-10 p-2.5  dark:bg-black dark:border-dark dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+          placeholder="Search..." required />
+      </div>
+      <button type="submit"
+        class="p-2.5 text-sm font-medium text-white bg-black rounded-full border border-black hover:bg-black dark:bg-black dark:hover:bg-black mx-2  hover:shadow-purple-600 hover:shadow-ste">
+        <img src="/images/filtrar.png" alt="Filter" class="w-6 h-6"></img>
+      </button>
+      <span class="sr-only">Filtro</span>
+        </form>
+      </section>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>      
+  
       <section className="mt-10">
         <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-4 gap-12 mt-10 mx-12">
           {games.map((game, index) => (

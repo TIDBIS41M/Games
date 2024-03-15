@@ -61,11 +61,12 @@ export default async function Home() {
 
   const games = [...gamesSteam, ...gamesNintendo, ...gamesPlay, ...gamesXbox]; 
   return (
-    <main className="grid w-full h-screen py-5">
+    <main className="grid w-full px-10 pt-36 bg-[#1c1c1c] bg-no-repeat">
       <div className="grid grid-cols-2 justify-end items-center h-full grid-flow-col ">
-        <div className="h-3/4 text-left text-[4rem] items-center pl-20 bg-[url('/images/purpleblur.png')] bg-top bg-no-repeat text-blue-200">Universe of games, at the tap of your finger
+        <div className="flex h-full text-left text-[4rem] items-center justify-center pl-20 bg-[url('/images/purpleblur.png')] bg-cover bg-center bg-no-repeat text-white">
+          <p className="text-center">Universe of games, at the tap of your finger</p>
         </div>
-        <div className="grid grid-flow-row absolute -z-10">
+        <div className="grid grid-flow-row absolute z-10">
           <div className="">
             <img src="/images/greenblur.png" alt="" className="w-1/3 translate-x-[40rem] -translate-y-8" />
           </div>
@@ -74,7 +75,7 @@ export default async function Home() {
             <img src="/images/Blue-Glow-Transparent.png" alt="" className="w-1/3 translate-x-[25rem] -translate-y-36"/>
           </div>
         </div>
-        <div className="w-full">
+        <div className="w-full z-20">
           <img
             src="/images/HologramLGirl2.png"
             width={200}
@@ -86,8 +87,8 @@ export default async function Home() {
         
       </div>
       <section className="mt-10 mb-10" >
-        <h1 class="text-[47px] text-white font-bold text-center mb-[140px]" >Explore Our Featured Platforms</h1>
-        <div class="flex justify-evenly items-center bg-[#292929ff] rounded-[20px] h-[183px] ml-[15px] mr-[15px]">        
+        <h1 class="text-[47px] text-white font-bold text-center mb-[140px] mt-7" >Explore Our Featured Platforms</h1>
+        <div class="flex justify-evenly items-center  bg-[#292929ff] bg-no-repeat rounded-[20px] h-[183px] ml-[15px] mr-[15px]">        
             <div class="flex justify-center items-center w-[250px] h-[320px] rounded-[34px]
                         bg-gradient-to-t from-[#b3b3b3ff] to-[#fff]">                      
                 <img class="max-w-max max-h-max logo" src="/images/playstation.png"/>
@@ -108,7 +109,7 @@ export default async function Home() {
       </section>
 
       <section className="mt-10">
-        <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-4 gap-11 mt-10 mx-10">
+        <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-4 gap-12 mt-10 mx-12">
           {games.map((game, index) => (
             <GameCard game={game} key={game}/>
           ))}

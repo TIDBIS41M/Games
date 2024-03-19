@@ -1,10 +1,10 @@
 import GameCard from "./components/GameCard";
-
+import Filter from "./components/Filter";
 export default async function Home() {
-  const steamUrl = "http://10.100.1.60:3000/nintendo"
-  const xboxUrl = "http://10.100.1.60:3000/nintendo"
-  const psUrl = "http://10.100.1.60:3000/nintendo"
-  const nintendoUrl = "http://10.100.1.60:3000/nintendo"
+  const steamUrl = "http://10.100.1.138:3000/xbox"
+  const xboxUrl = "http://10.100.1.138:3000/xbox"
+  const psUrl = "http://10.100.1.138:3000/xbox"
+  const nintendoUrl = "http://10.100.1.138:3000/xbox"
 
   
   const responseSteam = await fetch(steamUrl, {
@@ -20,7 +20,7 @@ export default async function Home() {
     game.logo = "/images/steam.jpg"
   })
   
-  const responseNintendo = await fetch(steamUrl, {
+  const responseNintendo = await fetch(nintendoUrl, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -58,6 +58,8 @@ export default async function Home() {
     game.company  = "Xbox"
     game.logo = "/images/xbox.jpg"
   })
+
+    
 
   const games = [...gamesSteam, ...gamesNintendo, ...gamesPlay, ...gamesXbox]; 
   return (
@@ -116,13 +118,14 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="mt-10">
-        <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-4 gap-12 mt-10 mx-12">
-          {games.map((game, index) => (
-            <GameCard game={game} key={game}/>
-          ))}
-
-        </div>
+      <section className="my-10">
+      <Filter
+          games={games} // Arreglo de todos los juegos
+          gamesSteam={gamesSteam} // Arreglo de juegos de Steam
+          gamesNintendo={gamesNintendo} // Arreglo de juegos de Nintendo
+          gamesPlay={gamesPlay} // Arreglo de juegos de PlayStation
+          gamesXbox={gamesXbox} // Arreglo de juegos de Xbox
+        />
       </section>
     </main>
   );

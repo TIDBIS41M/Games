@@ -6,6 +6,7 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [filteredGames, setFilteredGames] = useState(games);
   const [searchTerm, setSearchTerm] = useState('');
+  const [noGamesFound, setNoGamesFound] = useState(false); // Nuevo estado para indicar si no se encontraron juegos
 
   // Función para filtrar los juegos por término de búsqueda
   const filterBySearchTerm = (gamesToFilter, term) => {
@@ -18,32 +19,38 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
   const applyFilters = () => {
     let filteredResults = filteredGames;
 
-      switch (selectedCompany) {
-        case 'all':
-          filteredResults = games;
-          break;
-        case 'steam':
-          filteredResults = gamesSteam;
-          break;
-        case 'nintendo':
-          filteredResults = gamesNintendo;
-          break;
-        case 'play':
-          filteredResults = gamesPlay;
-          break;
-        case 'xbox':
-          filteredResults = gamesXbox;
-          break;
-        default:
-          break;
-      }
-    
+    switch (selectedCompany) {
+      case 'all':
+        filteredResults = games;
+        break;
+      case 'steam':
+        filteredResults = gamesSteam;
+        break;
+      case 'nintendo':
+        filteredResults = gamesNintendo;
+        break;
+      case 'play':
+        filteredResults = gamesPlay;
+        break;
+      case 'xbox':
+        filteredResults = gamesXbox;
+        break;
+      default:
+        break;
+    }
 
     if (searchTerm) {
       filteredResults = filterBySearchTerm(filteredResults, searchTerm);
     }
 
     setFilteredGames(filteredResults);
+
+    // Verificar si no se encontraron juegos después de aplicar los filtros
+    if (filteredResults.length === 0) {
+      setNoGamesFound(true);
+    } else {
+      setNoGamesFound(false);
+    }
   };
 
   useEffect(() => {
@@ -129,9 +136,18 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
 
 
       <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-4 gap-12 mt-10 mx-12">
-        {filteredGames.map((game, index) => (
-          <GameCard key={index} game={game} />
-        ))}
+        {/* Renderizar cartas de juego si hay juegos, de lo contrario, mostrar el mensaje de juego no encontrado */}
+        {noGamesFound ? (
+          
+          <div className="col-span-4 flex justify-center items-center h-full">
+            <h1 className="text-slate-100 text-3xl font-bold">Juego no encontrado</h1>
+          </div>
+
+        ) : (
+          filteredGames.map((game, index) => (
+            <GameCard key={index} game={game} />
+          ))
+        )}
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ function generateStarImages(rate) {
           className="w-6 h-6"
         />
       );
-    } else {
+    } else { 
       // Agregar estrella vacía si la puntuación es menor a i
       starImages.push(
         <img

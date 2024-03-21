@@ -2,9 +2,9 @@ import GameCard from "./components/GameCard";
 import Filter from "./components/Filter";
 export default async function Home() {
   const steamUrl = "http://10.100.0.207:3000/steam"
-  const xboxUrl = "http://10.100.1.153:3000/xbox"
+  const xboxUrl = "http://10.100.0.207:3000/steam"
   const psUrl = "http://10.100.0.207:3000/steam"
-  const nintendoUrl = "http://10.100.1.153:3000/xbox"
+  const nintendoUrl = "http://10.100.0.207:3000/steam"
 
   
   const responseSteam = await fetch(steamUrl, {
@@ -39,7 +39,6 @@ export default async function Home() {
       'Content-Type': 'application/json',
     },
   });
-
   const gamesPlay = await responsePlay.json()
   gamesPlay.forEach((game) => {
     game.company  = "PlayStation"
@@ -60,7 +59,6 @@ export default async function Home() {
   })
 
     
-
   const games = [...gamesSteam, ...gamesNintendo, ...gamesPlay, ...gamesXbox]; 
   return (
     <main className="grid w-full  pt-36 bg-[#1c1c1c] bg-no-repeat">
@@ -114,6 +112,7 @@ export default async function Home() {
               </div>
           </div>
       </section>
+<<<<<<< HEAD
 
 
      
@@ -154,6 +153,8 @@ export default async function Home() {
   <br></br>
   <br></br>
   <br></br>      
+=======
+>>>>>>> c5116be66567625eb8ed4b5df78f7939421d048e
   
       <section className="mt-10">
       <Filter

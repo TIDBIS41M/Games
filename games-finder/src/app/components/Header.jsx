@@ -4,7 +4,8 @@ async function Header() {
   
     return (
 
-<header className="flex mt-0 mb-4 justify-center items-center bg bg-neutral p-6 text-2xl font-semibold">
+<header className="flex mt-0 mb-4 justify-center items-center bg bg-[#242424ff
+] p-6 text-2xl font-semibold">
     <div className="flex items-center gap-x-2">
         <Image
             src= "/images/HeadMashUpW.png"

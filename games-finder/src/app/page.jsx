@@ -62,19 +62,7 @@ export default async function Home() {
   const games = [...gamesSteam, ...gamesNintendo, ...gamesPlay, ...gamesXbox]; 
   return (
     <main className="grid w-full h-screen py-5">
-    <header className="flex mt-0 mb-4 justify-center items-center p-6 text-2xl font-semibold">
-    <div className="flex items-center gap-x-2">
-        <Image
-            src= "/images/HeadMashUpW.png"
-            width={40}
-            height={40}
-            alt="logoHeader"
-            className=""
-          />
-          <h1 className="md">Mash-Up</h1>
-    </div>
-    </header>
-      <div className="grid grid-cols-2 justify-end items-center grid-flow-col ">
+      <div className="grid grid-cols-2 justify-end items-center h-full grid-flow-col ">
         <div className="h-3/4 text-left text-[4rem] items-center pl-20 bg-[url('/images/purpleblur.png')] bg-top bg-no-repeat text-blue-200">Universe of games, at the tap of your finger
         </div>
         <div className="grid grid-flow-row absolute -z-10">
@@ -97,7 +85,7 @@ export default async function Home() {
         </div>
         
       </div>
-      <section className="mt-10 mb-10" >
+      <section className="mt-10 mb-10" id="#explore" >
         <h1 class="text-[45px] text-center mb-[140px]" >Explore Our Featured Platforms</h1>
         <div class="flex justify-evenly items-center bg-[#292929ff] rounded-[20px] h-[180px]">
             

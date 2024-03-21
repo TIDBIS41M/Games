@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 async function NavBar() {
   
@@ -15,6 +16,7 @@ async function NavBar() {
               className="mx-auto"
             />
           </button>
+          </a>
         </li>
         <li>
           <button className="m-2 size-16 align-middle rounded-full bg-[#303030] p-5 border-neutral-950 hover:size-20 duration-500 transition-all hover:-translate-y-2 hover:shadow-lg hover:shadow-purple-600">

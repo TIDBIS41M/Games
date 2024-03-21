@@ -6,41 +6,63 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [filteredGames, setFilteredGames] = useState(games);
   const [searchTerm, setSearchTerm] = useState('');
+  const [noGamesFound, setNoGamesFound] = useState(false); // Nuevo estado para indicar si no se encontraron juegos
 
-  const filterByCompany = (company) => {
-    setSelectedCompany(company);
+  // Función para filtrar los juegos por término de búsqueda
+  const filterBySearchTerm = (gamesToFilter, term) => {
+    return gamesToFilter.filter(game =>
+      game.name.toLowerCase().includes(term.toLowerCase())
+    );
+  };
 
-    switch (company) {
+  // Función para aplicar filtros
+  const applyFilters = () => {
+    let filteredResults = filteredGames;
+
+    switch (selectedCompany) {
       case 'all':
-        setFilteredGames(games);
+        filteredResults = games;
         break;
       case 'steam':
-        setFilteredGames(gamesSteam);
+        filteredResults = gamesSteam;
         break;
       case 'nintendo':
-        setFilteredGames(gamesNintendo);
+        filteredResults = gamesNintendo;
         break;
       case 'play':
-        setFilteredGames(gamesPlay);
+        filteredResults = gamesPlay;
         break;
       case 'xbox':
-        setFilteredGames(gamesXbox);
+        filteredResults = gamesXbox;
         break;
       default:
-        setFilteredGames(games);
         break;
+    }
+
+    if (searchTerm) {
+      filteredResults = filterBySearchTerm(filteredResults, searchTerm);
+    }
+
+    setFilteredGames(filteredResults);
+
+    // Verificar si no se encontraron juegos después de aplicar los filtros
+    if (filteredResults.length === 0) {
+      setNoGamesFound(true);
+    } else {
+      setNoGamesFound(false);
     }
   };
 
   useEffect(() => {
-    const filteredResults = games.filter(game =>
-      game.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredGames(filteredResults);
-  }, [searchTerm, filteredGames]);
+    applyFilters();
+  }, [searchTerm, selectedCompany]);
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
+  };
+
+  const filterByCompany = (company) => {
+    setSelectedCompany(company);
   };
 
   return (
@@ -88,26 +110,44 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
           <span className="sr-only">Filtro</span>
         </form>
       </section>
-  <br></br>
-  <br></br>
-  <br></br>
-  <br></br>
-  <br></br>      
-      <button onClick={() => filterByCompany('all')}>All</button>
-      <br />
-      <button onClick={() => filterByCompany('steam')}>Steam</button>
-      <br />
-      <button onClick={() => filterByCompany('nintendo')}>Nintendo</button>
-    <br />
-      <button onClick={() => filterByCompany('play')}>Play</button>
-      <br />
-      <button onClick={() => filterByCompany('xbox')}>Xbox</button>
-      <br />
+
+     
+  <div className='flex justify-center'>
+    <button onClick={() => filterByCompany('all')} className='shadow bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mr-2'>
+      All
+    </button>
+    
+    <button onClick={() => filterByCompany('steam')} className='shadow-steam mr-2'>
+      <img src="/images/steam.jpg" alt="steamBtn" />
+    </button>
+    
+    <button onClick={() => filterByCompany('nintendo')} className='shadow-nintendo mr-2'>
+      <img src="/images/Nintendo.jpg" alt="nintendoBtn" />
+    </button>
+    
+    <button onClick={() => filterByCompany('play')} className='shadow-playstation mr-2'>
+      <img src="/images/ps.jpg" alt="playBtn" />
+    </button>
+  
+    <button onClick={() => filterByCompany('xbox')} className='shadow-xbox'>
+      <img src="/images/xbox.jpg" alt="xboxBtn" />
+    </button>
+  </div>
+
 
       <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-4 gap-12 mt-10 mx-12">
-        {filteredGames.map((game, index) => (
-          <GameCard key={index} game={game} />
-        ))}
+        {/* Renderizar cartas de juego si hay juegos, de lo contrario, mostrar el mensaje de juego no encontrado */}
+        {noGamesFound ? (
+          
+          <div className="col-span-4 flex justify-center items-center h-full">
+            <h1 className="text-slate-100 text-3xl font-bold">Juego no encontrado</h1>
+          </div>
+
+        ) : (
+          filteredGames.map((game, index) => (
+            <GameCard key={index} game={game} />
+          ))
+        )}
       </div>
     </div>
   );

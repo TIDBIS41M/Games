@@ -1,10 +1,10 @@
 import GameCard from "./components/GameCard";
-
+import Filter from "./components/Filter";
 export default async function Home() {
-  const steamUrl = "http://10.100.1.60:3000/nintendo"
-  const xboxUrl = "http://10.100.1.60:3000/nintendo"
-  const psUrl = "http://10.100.1.60:3000/nintendo"
-  const nintendoUrl = "http://10.100.1.60:3000/nintendo"
+  const steamUrl = "http://10.100.0.204:3000/steam"
+  const xboxUrl = "http://10.100.0.204:3000/steam"
+  const psUrl = "http://10.100.0.204:3000/steam"
+  const nintendoUrl = "http://10.100.1.97:3000/nintendo"
 
   
   const responseSteam = await fetch(steamUrl, {
@@ -20,7 +20,7 @@ export default async function Home() {
     game.logo = "/images/steam.jpg"
   })
   
-  const responseNintendo = await fetch(steamUrl, {
+  const responseNintendo = await fetch(nintendoUrl, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -39,7 +39,6 @@ export default async function Home() {
       'Content-Type': 'application/json',
     },
   });
-
   const gamesPlay = await responsePlay.json()
   gamesPlay.forEach((game) => {
     game.company  = "PlayStation"
@@ -59,13 +58,15 @@ export default async function Home() {
     game.logo = "/images/xbox.jpg"
   })
 
+    
   const games = [...gamesSteam, ...gamesNintendo, ...gamesPlay, ...gamesXbox]; 
   return (
-    <main className="grid w-full h-screen py-5">
+    <main className="grid w-full  pt-36 bg-[#1c1c1c] bg-no-repeat">
       <div className="grid grid-cols-2 justify-end items-center h-full grid-flow-col ">
-        <div className="h-3/4 text-left text-[4rem] items-center pl-20 bg-[url('/images/purpleblur.png')] bg-top bg-no-repeat text-blue-200">Universe of games, at the tap of your finger
+        <div className="flex h-full text-left text-[4rem] items-center justify-center pl-20 bg-[url('/images/purpleblur.png')] bg-cover bg-center bg-no-repeat text-white">
+          <p className="text-center">Universe of games, at the tap of your finger</p>
         </div>
-        <div className="grid grid-flow-row absolute -z-10">
+        <div className="grid grid-flow-row absolute z-10">
           <div className="">
             <img src="/images/greenblur.png" alt="" className="w-1/3 translate-x-[40rem] -translate-y-8" />
           </div>
@@ -74,7 +75,7 @@ export default async function Home() {
             <img src="/images/Blue-Glow-Transparent.png" alt="" className="w-1/3 translate-x-[25rem] -translate-y-36"/>
           </div>
         </div>
-        <div className="w-full">
+        <div className="w-full z-20">
           <img
             src="/images/HologramLGirl2.png"
             width={200}
@@ -85,35 +86,44 @@ export default async function Home() {
         </div>
         
       </div>
-      <section className="mt-10 mb-10" id="#explore" >
-        <h1 class="text-[45px] text-center mb-[140px]" >Explore Our Featured Platforms</h1>
-        <div class="flex justify-evenly items-center bg-[#292929ff] rounded-[20px] h-[180px]">
-            
-            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
-                        bg-gradient-to-t from-[#b3b3b3ff] to-[#fff]">
-                <img class="max-w-max max-h-max logo" src="/images/playstation.png"/>
+      
+      <div className="w-[25px] ">
+
+      </div>
+      <section className="mt-10 mb-10" >
+        <h1 class="text-[47px] text-white font-bold text-center mb-[140px] mt-7" >Explore Our Featured Platforms</h1>
+        <div className="flex justify-evenly items-center  bg-[#292929ff] bg-no-repeat rounded-[20px] h-[183px] ml-[15px] mr-[15px]">        
+            <div className="flex justify-center items-center w-[250px] h-[320px] rounded-[34px]
+                        bg-gradient-to-t from-[#b3b3b3ff] to-[#fff]
+                        shadow-ps">               
+                <img className="max-w-max max-h-max logo" src="/images/playstation.png"/>
             </div>
-            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
-                        bg-gradient-to-t from-[#067706ff] to-[#0ab90aff]">
-                <img class="max-w-max max-h-max logo" src="/images/xbox.png"/>
+            <div className="flex justify-center items-center w-[250px] h-[320px] rounded-[34px]
+                        bg-gradient-to-t from-[#067706ff] to-[#0ab90aff]
+                        shadow-xb">
+                <img className="max-w-max max-h-max logo" src="/images/xbox.png"/>
             </div>
-            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
-                        bg-gradient-to-t from-[#820505ff] to-[#ff0000ff]">                                           
-                <img class="max-w-max max-h-max logo" src="/images/nintendo.png"/>
+            <div className="flex justify-center items-center w-[250px] h-[320px] rounded-[34px]
+                        bg-gradient-to-t from-[#820505ff] to-[#ff0000ff]
+                        shadow-nin">                                           
+                <img className="max-w-max max-h-max logo" src="/images/nintendo.png"/>
             </div>
-            <div class="flex justify-center items-center w-[225px] h-[320px] rounded-[34px]
-                        bg-gradient-to-t from-[#093153ff] to-[#1077d2ff]">
-                <img class="max-w-max max-h-max" src="/images/steam.png"/>
+            <div className="flex justify-center items-center w-[250px] h-[320px] rounded-[34px]
+                        bg-gradient-to-t from-[#093153ff] to-[#1077d2ff]
+                        shadow-ste">
+                <img className="max-w-max max-h-max" src="/images/steam.png"/>
             </div>
         </div>
       </section>
+  
       <section className="mt-10">
-        <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-4 gap-8 mt-10">
-          {games.map((game, index) => (
-            <GameCard game={game} key={game}/>
-          ))}
-
-        </div>
+      <Filter
+          games={games} // Arreglo de todos los juegos
+          gamesSteam={gamesSteam} // Arreglo de juegos de Steam
+          gamesNintendo={gamesNintendo} // Arreglo de juegos de Nintendo
+          gamesPlay={gamesPlay} // Arreglo de juegos de PlayStation
+          gamesXbox={gamesXbox} // Arreglo de juegos de Xbox
+        />
       </section>
     </main>
   );

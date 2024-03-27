@@ -1,10 +1,10 @@
 import GameCard from "./components/GameCard";
 import Filter from "./components/Filter";
 export default async function Home() {
-  const steamUrl = "http://10.100.0.57:3000/steam"
-  const xboxUrl = "http://10.100.0.57:3000/steam"
-  const psUrl = "http://10.100.0.57:3000/steam"
-  const nintendoUrl = "http://10.100.0.57:3000/steam"
+  const steamUrl = "http://localhost:3001/ps"
+  const xboxUrl = "http://localhost:3001/ps"
+  const psUrl = "http://localhost:3001/ps"
+  const nintendoUrl = "http://localhost:3001/ps"
 
   
   const responseSteam = await fetch(steamUrl, {

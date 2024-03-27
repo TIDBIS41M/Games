@@ -4,24 +4,45 @@ import GameCard from './GameCard';
 
 const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
   const [selectedCompany, setSelectedCompany] = useState(null);
+  const [originalGames, setOriginalGames] = useState(games);
   const [filteredGames, setFilteredGames] = useState(games);
   const [searchTerm, setSearchTerm] = useState('');
-  const [noGamesFound, setNoGamesFound] = useState(false); // Nuevo estado para indicar si no se encontraron juegos
+  const [noGamesFound, setNoGamesFound] = useState(false);
+  const [randomizeActivated, setRandomizeActivated] = useState(false);
+  const [showAnimation, setShowAnimation] = useState(false);
 
-  // Función para filtrar los juegos por término de búsqueda
-  const filterBySearchTerm = (gamesToFilter, term) => {
-    return gamesToFilter.filter(game =>
-      game.name.toLowerCase().includes(term.toLowerCase())
-    );
+  useEffect(() => {
+    applyFilters();
+  }, [searchTerm, selectedCompany]);
+
+  useEffect(() => {
+    if (randomizeActivated) {
+      setShowAnimation(true);
+      setTimeout(() => {
+        randomizer();
+        setShowAnimation(false);
+      }, 7000); // Tiempo de espera en milisegundos antes de mostrar las cartas
+    }
+  }, [randomizeActivated]);
+
+  const randomizer = () => {
+    const randomGames = [];
+    const gamesToRandomize = [...filteredGames]; // Clone the original games array
+
+    while (randomGames.length < 10 && gamesToRandomize.length > 0) {
+      const randomIndex = Math.floor(Math.random() * gamesToRandomize.length);
+      randomGames.push(gamesToRandomize.splice(randomIndex, 1)[0]);
+    }
+
+    setFilteredGames(randomGames);
+    setRandomizeActivated(true); // Indicate that randomize button has been activated
   };
 
-  // Función para aplicar filtros
   const applyFilters = () => {
-    let filteredResults = filteredGames;
+    let filteredResults = [...originalGames];
 
     switch (selectedCompany) {
       case 'all':
-        filteredResults = games;
         break;
       case 'steam':
         filteredResults = gamesSteam;
@@ -45,7 +66,6 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
 
     setFilteredGames(filteredResults);
 
-    // Verificar si no se encontraron juegos después de aplicar los filtros
     if (filteredResults.length === 0) {
       setNoGamesFound(true);
     } else {
@@ -53,9 +73,11 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
     }
   };
 
-  useEffect(() => {
-    applyFilters();
-  }, [searchTerm, selectedCompany]);
+  const filterBySearchTerm = (gamesToFilter, term) => {
+    return gamesToFilter.filter(game =>
+      game.name.toLowerCase().includes(term.toLowerCase())
+    );
+  };
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
@@ -64,6 +86,17 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
   const filterByCompany = (company) => {
     setSelectedCompany(company);
   };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    applyFilters();
+  };
+
+  const toggleRandomizer = () => {
+    setFilteredGames(randomizeActivated ? originalGames : filteredGames);
+    setRandomizeActivated(!randomizeActivated);
+  };
+
 
   return (
     
@@ -79,13 +112,17 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
 
         <br></br>
 
-        <form className="flex items-center max-w-screen-lg mx-auto">
-          <button
-            type="submit"
-            className="p-2.5 text-sm font-medium text-white bg-black rounded-full border border-black hover:bg-black dark:bg-black dark:hover:bg-black mx-2  hover:shadow-purple-600 hover:shadow-ste"
-          >
-            <img src="/images/tres.png" alt="dados" className="w-6 h-6" />
-          </button>
+        <form className="flex items-center max-w-screen-lg mx-auto" onSubmit={handleSubmit}>
+        <button
+          type="button"
+          className={`p-2 shadow ${randomizeActivated ? 'bg-gray-9x00' : 'bg-black'} text-white rounded-full border border-black mx-2 hover:shadow-purple-600 `}
+          onClick={() => {
+            toggleRandomizer(); // Llama a la función randomizer siempre que se haga clic en el botón
+          }}
+        >
+          <img src="/images/tres.png" alt="dados" className="w-6 h-6" />
+        </button>
+
           <span className="sr-only">Dados</span>
           <label htmlFor="simple-search" className="sr-only">
             Search
@@ -102,53 +139,60 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
               onChange={handleSearch}
             />
           </div>
-          <button
-            className="p-2.5 text-sm font-medium text-white bg-black rounded-full border border-black hover:bg-black dark:bg-black dark:hover:bg-black mx-2  hover:shadow-purple-600 hover:shadow-ste"
-          >
-            <img src="/images/filtrar.png" alt="Filter" className="w-6 h-6" />
-          </button>
-          <span className="sr-only">Filtro</span>
         </form>
       </section>
 
      
   <div className='flex justify-center'>
-    <button onClick={() => filterByCompany('all')} className='shadow bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mr-2'>
-      All
-    </button>
-    
-    <button onClick={() => filterByCompany('steam')} className='shadow-steam mr-2'>
-      <img src="/images/steam.jpg" alt="steamBtn" />
-    </button>
-    
-    <button onClick={() => filterByCompany('nintendo')} className='shadow-nintendo mr-2'>
-      <img src="/images/Nintendo.jpg" alt="nintendoBtn" />
-    </button>
-    
-    <button onClick={() => filterByCompany('play')} className='shadow-playstation mr-2'>
-      <img src="/images/ps.jpg" alt="playBtn" />
-    </button>
-  
-    <button onClick={() => filterByCompany('xbox')} className='shadow-xbox'>
-      <img src="/images/xbox.jpg" alt="xboxBtn" />
-    </button>
+    <button onClick={() => filterByCompany('all')} className={`p-2 shadow ${selectedCompany === 'all' ? 'bg-purple-700' : 'bg-purple-500 hover:bg-purple-600'} text-white font-bold py-2 px-4 rounded mr-2`}>
+  All
+</button>
+
+<button onClick={() => filterByCompany('steam')} className={`p-2 shadow-steam mr-2 ${selectedCompany === 'steam' ? 'bg-blue-700' : 'bg-blue-500 hover:bg-blue-600'}`}>
+  <img src="/images/steam.jpg" alt="steamBtn" />
+</button>
+
+<button onClick={() => filterByCompany('nintendo')} className={`p-2 shadow-nintendo mr-2 ${selectedCompany === 'nintendo' ? 'bg-red-700' : 'bg-red-500 hover:bg-red-600'}`}>
+  <img src="/images/Nintendo.jpg" alt="nintendoBtn" />
+</button>
+
+<button onClick={() => filterByCompany('play')} className={`p-2 shadow-playstation mr-2 ${selectedCompany === 'play' ? 'bg-slate-700' : 'bg-slate-500 hover:bg-slate-600'}`}>
+  <img src="/images/ps.jpg" alt="playBtn" />
+</button>
+
+<button onClick={() => filterByCompany('xbox')} className={`p-2 shadow-xbox ${selectedCompany === 'xbox' ? 'bg-green-700' : 'bg-green-500 hover:bg-green-600'}`}>
+  <img src="/images/xbox.jpg" alt="xboxBtn" />
+</button>
+
   </div>
 
 
-      <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-4 gap-12 mt-10 mx-12">
-        {/* Renderizar cartas de juego si hay juegos, de lo contrario, mostrar el mensaje de juego no encontrado */}
-        {noGamesFound ? (
-          
+  <section className="my-10">
+  {/* If anidado para controlar la visualización de la animación y el mensaje de "Juego no encontrado" */}
+  {noGamesFound ? (
+    <div className="col-span-4 flex justify-center items-center h-full">
+      <h1 className="text-slate-100 text-3xl font-bold">Juego no encontrado</h1>
+    </div>
+  ) : (
+    <>
+      {showAnimation ? (
+        <>
           <div className="col-span-4 flex justify-center items-center h-full">
-            <h1 className="text-slate-100 text-3xl font-bold">Juego no encontrado</h1>
+            <img src="/images/diceAnimation.gif" alt="Loading..." />
           </div>
-
-        ) : (
-          filteredGames.map((game, index) => (
+        </>
+      ) : (
+        <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-4 gap-12 mt-10 mx-12">
+          {/* Renderizar cartas de juego si hay juegos */}
+          {filteredGames.map((game, index) => (
             <GameCard key={index} game={game} />
-          ))
-        )}
-      </div>
+          ))}
+        </div>
+      )}
+    </>
+  )}
+</section>
+
     </div>
   );
 };

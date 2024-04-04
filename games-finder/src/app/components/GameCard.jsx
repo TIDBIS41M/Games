@@ -53,21 +53,26 @@ function GameCard({ game }) {
           height={100}
           alt="HoloGirl"
           style={{ maxHeight: '250px' }}
-          className="mx-auto w-full rounded-3xl my-auto h-50%"
+          className="mx-auto w-full max-md:w-10/12 sm:rounded-3xl max-md:mt-10 my-auto h-50%"
         />
         <img 
           src={game.logo}
-          className='rounded-t-md absolute top-0 left-0  mt-4'
+          className='rounded-t-md max-md:hidden absolute top-0 left-0 mt-4'w
           style={{ width: '130px', height: '38px' }} // Ajusta el tamaño del logo según tus necesidades
         />  
       </div>
-      <div className='flex-col justify-between h-[100px] '>
+      <img 
+          src={game.logo}
+          className='rounded-t-md sm:hidden absolute top-0 left-4 mt-4'w
+          style={{ width: '130px', height: '38px' }} // Ajusta el tamaño del logo según tus necesidades
+        />  
+      <div className='flex-col justify-between max-md:h-[120px] h-[100px] '>
         <div className=' mt-4'>
           <h3 className="font-semibold text-lg">{game.name}</h3>
         </div>
         <div className="absolute bottom-0 left-0 w-full mt-4  mb-3">
-          <h3 className="font-semibold text-xl text-left pl-4">${game.price}</h3>
-          <div className="flex items-center absolute bottom-0 right-0 mt-4 mr-4">
+          <h3 className="font-semibold text-xl max-md:text-center text-left md:pl-4">${game.price}</h3>
+          <div className="flex items-center absolute max-md:bottom-7 md:bottom-0 right-0 mt-4 mr-4">
             {generateStarImages(game.rate)}
           </div>
         </div>

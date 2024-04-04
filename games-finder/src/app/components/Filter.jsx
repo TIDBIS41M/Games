@@ -103,9 +103,8 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
     <div>
         <section className="my-10">
         <img src="/images/GamesTag.png" alt="Games" className="w-full h-full object-cover" />
-
         <div className="w-full flex justify-center">
-          <h2 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+          <h2 className="mb-4 max-md:text-center max-md:text-2xl text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
             Explore Our Game Catalogue
           </h2>
         </div>
@@ -133,7 +132,7 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
             </div>
             <input
               type="text"
-              className="bg-purple-50 border border-purple-300 text-gray-900 text-sm rounded-full focus:ring-purple-500 focus:border-purple-500 block w-full ps-10 p-2.5  dark:bg-black dark:border-dark dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+              className="bg-purple-50 border border-purple-300 text-gray-900 text-sm rounded-full focus:ring-purple-500 focus:border-purple-500 block max-md:w-11/12 w-full ps-10 p-2.5  dark:bg-black dark:border-dark dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
               placeholder="Search..."
               value={searchTerm}
               onChange={handleSearch}
@@ -143,24 +142,24 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
       </section>
 
      
-  <div className='flex justify-center'>
-    <button onClick={() => filterByCompany('all')} className={`p-2 shadow ${selectedCompany === 'all' ? 'bg-purple-700' : 'bg-purple-500 hover:bg-purple-600'} text-white font-bold py-2 px-4 rounded mr-2`}>
+  <div className='flex max-md:flex-wrap justify-center'>
+    <button onClick={() => filterByCompany('all')} className={`p-2 shadow ${selectedCompany === 'all' ? 'bg-purple-700' : 'bg-purple-500 hover:bg-purple-600 my-2'} text-white font-bold py-2 px-4 rounded mr-2`}>
   All
 </button>
 
-<button onClick={() => filterByCompany('steam')} className={`p-2 shadow-steam mr-2 ${selectedCompany === 'steam' ? 'bg-blue-700' : 'bg-blue-500 hover:bg-blue-600'}`}>
+<button onClick={() => filterByCompany('steam')} className={`p-2 shadow-steam mr-2 ${selectedCompany === 'steam' ? 'bg-blue-700' : 'bg-blue-500 hover:bg-blue-600 max-md:w-1/3 my-2'}`}>
   <img src="/images/steam.jpg" alt="steamBtn" />
 </button>
 
-<button onClick={() => filterByCompany('nintendo')} className={`p-2 shadow-nintendo mr-2 ${selectedCompany === 'nintendo' ? 'bg-red-700' : 'bg-red-500 hover:bg-red-600'}`}>
+<button onClick={() => filterByCompany('nintendo')} className={`p-2 shadow-nintendo mr-2 ${selectedCompany === 'nintendo' ? 'bg-red-700' : 'bg-red-500 hover:bg-red-600 my-2 max-md:w-1/3'}`}>
   <img src="/images/Nintendo.jpg" alt="nintendoBtn" />
 </button>
 
-<button onClick={() => filterByCompany('play')} className={`p-2 shadow-playstation mr-2 ${selectedCompany === 'play' ? 'bg-slate-700' : 'bg-slate-500 hover:bg-slate-600'}`}>
+<button onClick={() => filterByCompany('play')} className={`p-2 shadow-playstation mr-2 ${selectedCompany === 'play' ? 'bg-slate-700' : 'bg-slate-500 hover:bg-slate-600 my-2 max-md:w-1/3'}`}>
   <img src="/images/ps.jpg" alt="playBtn" />
 </button>
 
-<button onClick={() => filterByCompany('xbox')} className={`p-2 shadow-xbox ${selectedCompany === 'xbox' ? 'bg-green-700' : 'bg-green-500 hover:bg-green-600'}`}>
+<button onClick={() => filterByCompany('xbox')} className={`p-2 shadow-xbox ${selectedCompany === 'xbox' ? 'bg-green-700' : 'bg-green-500 hover:bg-green-600 max-md:w-1/3 my-2'}`}>
   <img src="/images/xbox.jpg" alt="xboxBtn" />
 </button>
 
@@ -182,7 +181,7 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
           </div>
         </>
       ) : (
-        <div className="grid max-md:grid-flow-row max-md:m-5 md:grid-cols-4 gap-12 mt-10 mx-12">
+        <div className="grid max-md:grid-flow-row max-md:grid-cols-2 max-md:m-5 md:grid-cols-4 gap-12 mt-10 mx-12">
           {/* Renderizar cartas de juego si hay juegos */}
           {filteredGames.map((game, index) => (
             <GameCard key={index} game={game} />

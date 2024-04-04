@@ -1,24 +1,11 @@
-import Image from "next/image";
 
-async function Header() {
-  
-    return (
 
-<header className="flex mt-0 mb-4 justify-center items-center bg bg-[#242424ff
-] p-6 text-2xl font-semibold">
-    <div className="flex items-center gap-x-2">
-        <Image
-            src= "/images/HeadMashUpW.png"
-            width={40}
-            height={40}
-            alt="logoHeader"
-            className=""
-          />
-          <h1 className="md">Mash-Up</h1>
-    </div>
+function Header() {
+  return (
+    <header className=" absolute max-md:h-36 grid z-50 mt-0 mb-4 bg-center top-0 text-2xl font-semibold max-md:bg-no-repeat max-md:bg-[url('/images/header2.png')]">
+        <img src="/images/header2.png" alt="" className="max-md:opacity-0"/>
     </header>
-
-);
+  );
 }
 
 export default Header;

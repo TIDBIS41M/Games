@@ -1,0 +1,222 @@
+{
+    "games":[
+        {
+            "id_game": "1",
+            "name": "Counter-Strike 2",
+            "genre": "Shooter",
+            "description": "Counter-Strike is a series of multiplayer tactical first-person shooter video games in which teams of terrorists fight to perpetrate an act of terror while counter-terrorists try to prevent it. The series began on Windows in 1999 with the release of the first video game, Counter-Strike.",
+            "price": 0.00,
+            "date": "2012",
+            "rate": 5,
+            "video": "https://www.youtube.com/watch?v=nSE38xjMLqE",
+            "image": "https://upload.wikimedia.org/wikipedia/en/f/f2/CS2_Cover_Art.jpg"
+        },{
+            "id_game": "2",
+            "name": "Forza Horizon 4",
+            "genre": "Racing",
+            "description": "Forza Horizon 4 is an open-world racing video game developed by Playground Games and published by Microsoft Studios. It is the fourth installment in the Forza Horizon series and is set in a fictional representation of the United Kingdom. Players can participate in various racing events, explore the open world, and collect a wide range of cars.",
+            "price": 59.99,
+            "date": "2018",
+            "rate": 4,
+            "video": "https://www.youtube.com/watch?v=DxXXnaHGaKs",
+            "image": "https://upload.wikimedia.org/wikipedia/en/8/87/Forza_Horizon_4_cover.jpg"
+        },
+        {
+            "id_game": "3",
+            "name": "The Witcher 3: Wild Hunt",
+            "genre": "Adventure",
+            "description": "The Witcher 3: Wild Hunt is an action role-playing game developed and published by CD Projekt Red. It is based on the book series of the same name by Polish author Andrzej Sapkowski. The game follows the story of Geralt of Rivia, a monster hunter known as a Witcher.",
+            "price": 29.99,
+            "date": "2015",
+            "rate": 3,
+            "video": "https://www.youtube.com/watch?v=XHrskkHf958",
+            "image": "https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg"
+        },
+        {
+            "id_game": "4",
+            "name": "Portal 2",
+            "genre": "Platform",
+            "description": "Portal 2 is a puzzle-platform game developed by Valve. It is the sequel to Portal (2007) and was released in April 2011. The player controls Chell in the single-player campaign and one of two robots, Atlas and P-Body, in the cooperative campaign, as they navigate through various test chambers in the Aperture Science Enrichment Center.",
+            "price": 9.99,
+            "date": "2011",
+            "rate": 4,
+            "video": "https://www.youtube.com/watch?v=tax4e4hBBZc",
+            "image": "https://upload.wikimedia.org/wikipedia/en/f/f9/Portal2cover.jpg"
+        },
+        {
+            "id_game": "5",
+            "name": "Dragon Ball Z: Kakarot",
+            "genre": "Fighting",
+            "description": "Dragon Ball Z: Kakarot is an action role-playing game developed by CyberConnect2 and published by Bandai Namco Entertainment. The game follows the story of Goku and other Z Fighters through the various sagas of the Dragon Ball Z anime series, allowing players to relive iconic moments and engage in epic battles.",
+            "price": 59.99,
+            "date": "2020",
+            "rate": 4,
+            "video": "https://www.youtube.com/watch?v=Bf85wwJuFBE",
+            "image": "https://upload.wikimedia.org/wikipedia/en/e/e4/Dragon_Ball_Z_Kakarot_logo.png"
+        },
+        {
+            "id_game": "6",
+            "name": "Rocket League",
+            "genre": "Sports",
+            "description": "Rocket League is a vehicular soccer video game developed and published by Psyonix. The game is a sequel to Psyonix's Supersonic Acrobatic Rocket-Powered Battle-Cars (2008).",
+            "price": 19.99,
+            "date": "2015",
+            "rate": 5,
+            "video": "https://www.youtube.com/watch?v=5LSM8lV3_H0",
+            "image": "https://upload.wikimedia.org/wikipedia/pt/e/e8/Rocket_League.jpg"
+        },
+        {
+            "id_game": "7",
+            "name": "Terraria",
+            "genre": "Adventure",
+            "description": "Terraria is an action-adventure sandbox game developed by Re-Logic. The game was initially released for Microsoft Windows in May 2011, and has since been released for various other platforms and devices.",
+            "price": 9.99,
+            "date": "2011",
+            "rate": 5,
+            "video": "https://www.youtube.com/watch?v=6nUvWkD8rAE",
+            "image": "https://upload.wikimedia.org/wikipedia/en/1/1a/Terraria_Steam_artwork.jpg"
+        },
+        {
+            "id_game": "8",
+            "name": "Garry's Mod",
+            "genre": "Sandbox",
+            "description": "Garry's Mod (GMod) is a sandbox game developed by Facepunch Studios and published by Valve. The game allows players to manipulate objects and experiment with physics using the Source engine.",
+            "price": 9.99,
+            "date": "2006",
+            "rate": 4,
+            "video": "https://www.youtube.com/watch?v=VOgw8xL0M2I",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Garry%27s_Mod_logo.svg/250px-Garry%27s_Mod_logo.svg.png"
+        },
+        {
+            "id_game": "9",
+            "name": "Grand Theft Auto V",
+            "genre": "Adventure",
+            "description": "Grand Theft Auto V is an action-adventure game developed by Rockstar North and published by Rockstar Games. It is the seventh main entry in the Grand Theft Auto series.",
+            "price": 29.99,
+            "date": "2015",
+            "rate": 5,
+            "video": "https://www.youtube.com/watch?v=qoytS3930aY",
+            "image": "https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png"
+        },
+        {
+            "id_game": "10",
+            "name": "Stardew Valley",
+            "genre": "Simulation",
+            "description": "Stardew Valley is a simulation role-playing video game developed by Eric Barone. The game was released for Microsoft Windows in February 2016, with ports for OS X, Linux, PlayStation 4, Xbox One, Nintendo Switch, PlayStation Vita, iOS, and Android released later.",
+            "price": 14.99,
+            "date": "2016",
+            "rate": 4,
+            "video": "https://www.youtube.com/watch?v=ot7uXNQskhs",
+            "image": "https://upload.wikimedia.org/wikipedia/en/f/fd/Logo_of_Stardew_Valley.png"
+        },
+        {
+            "id_game": "11",
+            "name": "Outer Wilds",
+            "genre": "Adventure",
+            "description": "Outer Wilds is a space exploration game that combines elements of adventure and mystery. Players take on the role of an astronaut exploring a constantly evolving solar system in a 22-minute time loop. The story unfolds as players uncover secrets about the system's past and its inevitable fate.",
+            "price": 24.99,
+            "date": "2019",
+            "rate": 5,
+            "video": "https://www.youtube.com/watch?v=d6LGnVCL1_A",
+            "image": "https://upload.wikimedia.org/wikipedia/en/f/f6/Outer_Wilds_Steam_artwork.jpg"
+        },
+        {
+            "id_game": "12",
+            "name": "PlayerUnknown's Battlegrounds (PUBG)",
+            "genre": "Battle Royal",
+            "description": "PUBG is an online battle royale game where up to 100 players fight in a deathmatch to be the last one standing. Players can choose to land on various maps and utilize a variety of weapons and vehicles to survive.",
+            "price": 29.99,
+            "date": "2017",
+            "rate": 3,
+            "video": "https://www.youtube.com/watch?v=fDLAFIhfFy4",
+            "image": "https://upload.wikimedia.org/wikipedia/en/9/9f/Pubgbattlegrounds.png"
+        },
+        {
+            "id_game": "13",
+            "name": "The Forest",
+            "genre": "Adventure",
+            "description": "The Forest is a first-person horror survival game where the player assumes the role of a survivor of a plane crash stranded on an island inhabited by cannibal mutants. The goal is to survive while exploring the environment and building a shelter.",
+            "price": 19.99,
+            "date": "2014",
+            "rate": 5,
+            "video": "https://www.youtube.com/watch?v=7mwn5U2PNvk",
+            "image": "https://upload.wikimedia.org/wikipedia/en/4/46/TheForest_Game.jpg"
+        },
+        {
+            "id_game": "14",
+            "name": "Fall Guys: Ultimate Knockout",
+            "genre": "Battle Royale",
+            "description": "Fall Guys: Ultimate Knockout is a platformer battle royale game developed by Mediatonic and published by Devolver Digital. It was released for Microsoft Windows and PlayStation 4 on August 4, 2020.",
+            "price": 19.99,
+            "date": "2020",
+            "rate": 4,
+            "video": "https://www.youtube.com/watch?v=Wj3dUvGLjNQ",
+            "image": "https://upload.wikimedia.org/wikipedia/en/5/5e/Fall_Guys_cover.jpg"
+        },
+        {
+            "id_game": "15",
+            "name": "Paladins: Champions of the Realm",
+            "genre": "Adventure",
+            "description": "Paladins is a free-to-play hero shooter game featuring a diverse cast of champions, each with their own unique abilities and playstyles. Players compete in teams to complete objectives and defeat the opposing team. With customizable loadouts and a variety of game modes, Paladins offers fast-paced action and strategic gameplay.",
+            "price": 0.00,
+            "date": "2016",
+            "rate": 4,
+            "video": "https://www.youtube.com/watch?v=Jg9vF8F4sTA",
+            "image": "https://upload.wikimedia.org/wikipedia/en/1/13/Paladins_%28video_game%29.jpg"
+        },
+        {
+            "id_game": "16",
+            "name": "Risk of Rain 2",
+            "genre": "Shooter",
+            "description": "Risk of Rain 2 is a third-person shooter roguelike video game developed by Hopoo Games. The game is a sequel to Risk of Rain (2013), and was released for Microsoft Windows in August 2019, and later for Nintendo Switch, PlayStation 4, and Xbox One.",
+            "price": 24.99,
+            "date": "2019",
+            "rate": 4,
+            "video": "https://www.youtube.com/watch?v=IeLNqCrCtWs",
+            "image": "https://upload.wikimedia.org/wikipedia/en/c/c1/Risk_of_Rain_2.jpg"
+        },
+        {
+            "id_game": "17",
+            "name": "Euro Truck Simulator 2",
+            "genre": "Simulation",
+            "description": "Euro Truck Simulator 2 is a vehicle simulation game developed and published by SCS Software. The game is a direct sequel to the 2008 game Euro Truck Simulator and it is the second installment in the Euro Truck Simulator series.",
+            "price": 19.99,
+            "date": "2012",
+            "rate": 4,
+            "video": "https://www.youtube.com/watch?v=xlTuC18xVII",
+            "image": "https://upload.wikimedia.org/wikipedia/en/0/0e/Euro_Truck_Simulator_2_cover.jpg"
+        },
+        {
+            "id_game": "18",
+            "name": "Star Wars: The Force Unleashed",
+            "genre": "Action-Adventure",
+            "description": "Star Wars: The Force Unleashed is an action-adventure game set in the Star Wars universe. Players take on the role of Starkiller, Darth Vader's secret apprentice, as he embarks on a journey to hunt down Jedi. With intense lightsaber combat, Force powers, and a compelling storyline set between Episodes III and IV, players experience the dark side of the Force like never before.",
+            "price": 19.99,
+            "date": "2008",
+            "rate": 4,
+            "video": "https://www.youtube.com/watch?v=RkBiYpD3SDc",
+            "image": "https://upload.wikimedia.org/wikipedia/en/2/28/The_Force_Unleashed.jpg"
+        },
+        {
+            "id_game": "19",
+            "name": "Amnesia: The Dark Descent",
+            "genre": "Horror",
+            "description": "Amnesia: The Dark Descent is a first-person survival horror video game developed and published by Frictional Games. The game follows the story of Daniel, who awakens in a dark and foreboding castle with no memory of his past. As he explores the eerie environment, he must uncover his past while avoiding terrifying monsters that lurk in the shadows.",
+            "price": 19.99,
+            "date": "2010",
+            "rate": 4,
+            "video": "https://www.youtube.com/watch?v=u1nY_5-UrY4",
+            "image": "https://upload.wikimedia.org/wikipedia/en/6/62/Amnesia-The-Dark-Descent-Cover-Art.png"
+        },{
+            "id_game": "20",
+            "name": "The Elder Scrolls V: Skyrim Special Edition",
+            "genre": "Adventure",
+            "description": "The Elder Scrolls V: Skyrim Special Edition is an action role-playing game developed by Bethesda Game Studios. It is a remastered version of the original Skyrim game, featuring enhanced graphics and additional content.",
+            "price": 39.99,
+            "date": "2016",
+            "rate": 5,
+            "video": "https://www.youtube.com/watch?v=lTjRZ__-278",
+            "image": "https://upload.wikimedia.org/wikipedia/en/1/15/The_Elder_Scrolls_V_Skyrim_cover.png"
+        }
+    ]
+}

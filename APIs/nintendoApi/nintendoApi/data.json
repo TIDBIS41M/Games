@@ -1,0 +1,229 @@
+{
+      "games": [
+        {
+          "id_game": "1",
+          "name": "The Legend of Zelda: Breath of the Wild",
+          "genre": "Adventure",
+          "description": "Embark on an epic adventure in the vast kingdom of Hyrule, exploring wild lands and facing challenging dungeons to defeat Ganon and save the realm.",
+          "price": 59.99,
+          "date": "2017",
+          "rate": 5,
+          "video": "https://www.youtube.com/watch?v=ofH5ptn5w-A",
+          "image": "https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg"
+    },
+    {
+      "id_game": "2",
+      "name": "Super Mario Odyssey",
+      "genre": "Platform",
+      "description": "Embark on a globe-trotting adventure with Mario as he sets out to rescue Princess Peach from Bowser's clutches, using his trusty hat, Cappy, to possess enemies and objects along the way.",
+      "price": 59.99,
+      "date": "2017",
+      "rate": 4.5,
+      "video": "https://www.youtube.com/watch?v=wGQHQc_3ycE",
+      "image": "https://upload.wikimedia.org/wikipedia/en/8/8d/Super_Mario_Odyssey.jpg"
+    },
+    {
+      "id_game": "3",
+      "name": "Animal Crossing: New Horizons",
+      "genre": "Simulation",
+      "description": "Escape to a deserted island and create your own paradise as you craft, explore, and befriend adorable animal villagers in this relaxing life simulation game.",
+      "price": 59.99,
+      "date": "2020",
+      "rate": 4.8,
+      "video": "https://www.youtube.com/watch?v=_3YNL0OWio0",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/Animal_Crossing_New_Horizons.jpg/220px-Animal_Crossing_New_Horizons.jpg"
+    },
+    {
+      "id_game": "4",
+      "name": "Mario Kart 8",
+      "genre": "Racing",
+      "description": "Race against friends or AI opponents in this high-octane kart racing game featuring a variety of beloved Nintendo characters and exhilarating tracks.",
+      "price": 59.99,
+      "date": "2017",
+      "rate": 4.7,
+      "video": "https://www.youtube.com/watch?v=tKlRN2YpxRE",
+      "image": "https://upload.wikimedia.org/wikipedia/en/b/b5/MarioKart8Boxart.jpg"
+    },
+    {
+      "id_game": "5",
+      "name": "Splatoon 2",
+      "genre": "Shooter",
+      "description": "Engage in colorful ink-based battles as you compete in turf wars and multiplayer matches against players from around the world.",
+      "price": 59.99,
+      "date": "2017",
+      "rate": 4.6,
+      "video": "https://www.youtube.com/watch?v=qN4w5D2tzME",
+      "image": "https://upload.wikimedia.org/wikipedia/en/4/49/Splatoon_2.jpg"
+    },
+    {
+      "id_game": "6",
+      "name": "Pokémon Sword and Shield",
+      "genre": "Adventure",
+      "description": "Embark on a journey to become the Champion of the Galar region, capturing and training Pokémon while uncovering the mysteries of the Dynamax phenomenon.",
+      "price": 59.99,
+      "date": "2019",
+      "rate": 4.4,
+      "video": "https://www.youtube.com/watch?v=fPO2ouGn0lA",
+      "image": "https://m.media-amazon.com/images/I/81OxlurjwYL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id_game": "7",
+      "name": "Fire Emblem: Three Houses",
+      "genre": "Adventure",
+      "description": "Lead your house of students at the Officer's Academy and guide them through tactical battles and personal relationships in a war-torn land.",
+      "price": 59.99,
+      "date": "2019",
+      "rate": 4.7,
+      "video": "https://www.youtube.com/watch?v=ADaRsEhTB70",
+      "image": "https://upload.wikimedia.org/wikipedia/en/1/16/Fire_Emblem_Three_Houses.jpg"
+    },
+    {
+      "id_game": "8",
+      "name": "Luigi's Mansion 3",
+      "genre": "Adventure",
+      "description": "Join Luigi as he braves the haunted halls of the Last Resort hotel to rescue his friends from the clutches of King Boo.",
+      "price": 59.99,
+      "date": "2019",
+      "rate": 4.5,
+      "video": "https://www.youtube.com/watch?v=RSGgCfbYrg0",
+      "image": "https://upload.wikimedia.org/wikipedia/en/3/38/Luigi%27s_Mansion_3.jpg"
+    },
+    {
+      "id_game": "9",
+      "name": "Xenoblade Chronicles 2",
+      "genre": "Adventure",
+      "description": "Embark on a journey across the backs of colossal Titans to discover the secrets of the world of Alrest and save it from destruction.",
+      "price": 59.99,
+      "date": "2017",
+      "rate": 4.6,
+      "video": "https://www.youtube.com/watch?v=sJuiTw6nk7A",
+      "image": "https://upload.wikimedia.org/wikipedia/en/4/4a/Xenoblade_Chronicles_2.jpg"
+    },
+    {
+      "id_game": "10",
+      "name": "Super Smash Bros. Ultimate",
+      "genre": "Fighting",
+      "description": "Battle it out with your favorite video game characters in this ultimate crossover fighting game featuring a vast roster and iconic stages.",
+      "price": 59.99,
+      "date": "2018",
+      "rate": 4.8,
+      "video": "https://www.youtube.com/watch?v=cjdfqXIM-Ko",
+      "image": "https://upload.wikimedia.org/wikipedia/en/5/50/Super_Smash_Bros._Ultimate.jpg"
+    },
+    {
+      "id_game": "11",
+      "name": "Kirby and the Forgotten Land",
+      "genre": "Platform",
+      "description": "Kirby finds himself in a mysterious world known as the Forgotten Land, which is filled with various environments ranging from lush forests to sandy beaches and even bustling cities. ",
+      "price": 59.99,
+      "date": "2022",
+      "rate": 4.8,
+      "video": "https://www.youtube.com/watch?v=H3LAkr0ANgw",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/e7/Kirby_and_The_Forgotten_Land_Icon.jpg"
+    },
+    {
+      "id_game": "12",
+      "name": "Hollow Knight",
+      "genre": "Horror",
+      "description": "Discover a vast, interconnected world filled with deadly foes and stunning landscapes in this highly anticipated sequel to Hollow Knight.",
+      "price": 59.99,
+      "date": "2022",
+      "rate": 4.9,
+      "video": "https://www.youtube.com/watch?v=kWo5g-tsBNk",
+      "image": "https://upload.wikimedia.org/wikipedia/id/c/c0/Hollow_Knight_cover.jpg"
+    },
+    {
+      "id_game":"13",
+      "name":"Astral Chain",
+      "genre":"Adventure",
+      "description":"Players control a special police task force member fighting against interdimensional invaders using a sentient weapon called the Legion.",
+      "price":59.99,
+      "date":"2019",
+      "rate":4.9,
+      "video":"https://www.youtube.com/watch?v=brmmV3g4qqo",
+      "image":"https://upload.wikimedia.org/wikipedia/en/6/67/Astral_Chain.jpg"
+    },
+    {
+    "id_game":"14",
+    "name":"Fire Emblem Warriors",
+    "genre":"Adventure",
+    "description":"",
+    "price":59.99,
+    "date":"2017",
+    "rate":5,
+    "video":"https://www.youtube.com/watch?v=n16aNy1O65Y",
+    "image":"https://upload.wikimedia.org/wikipedia/en/e/e2/Fire_Emblem_Warriors.jpg"
+    },
+    {
+      "id_game":"15",
+      "name":"Mario Party Superstars",
+      "genre":"Battle Royal",
+      "description":"Mario Party Superstars is a multiplayer party game for Nintendo Switch, featuring classic boards and minigames from previous Mario Party titles, updated with modern graphics and gameplay enhancements. ",
+      "price":59.99,
+      "date":"2021",
+      "rate":4.8,
+      "video":"https://www.youtube.com/watch?v=2jEq0F656aY",
+      "image":"https://upload.wikimedia.org/wikipedia/en/1/1a/Mario_Party_Superstars_cover_art.jpg"
+      },
+        {
+          "id_game": "16",
+          "name": "Metroid Return of Samus",
+          "genre": "Adventure",
+          "description": "Embark on an intense intergalactic mission as bounty hunter Samus Aran, confronting deadly enemies and uncovering the secrets of the mysterious X parasite.",
+          "price": 59.99,
+          "date": "2021",
+          "rate": 4.8,
+          "video": "https://www.youtube.com/watch?v=UhOx-FpEAQk",
+          "image": "https://upload.wikimedia.org/wikipedia/en/9/93/Metroid2_boxart.jpg"
+        },
+        {
+          "id_game": "17",
+          "name": "Monster Hunter Rise",
+          "genre": "Adventure",
+          "description": "Join the hunt in this thrilling action RPG adventure, where you'll track down formidable monsters, forge powerful weapons, and explore a lush and dangerous world.",
+          "price": 59.99,
+          "date": "2021",
+          "rate": 4.7,
+          "video": "https://www.youtube.com/watch?v=menBww9QDBY",
+          "image": "https://upload.wikimedia.org/wikipedia/en/4/41/Monster_hunter_rise_cover.jpg"
+        },
+        {
+          "id_game": "18",
+          "name": "The Legend of Zelda: Twilight princess",
+          "genre": "Adventure",
+          "description": "Soar through the skies and brave the dangers of the surface world in this HD remaster of the classic Wii adventure, now enhanced with improved controls and visuals.",
+          "price": 59.99,
+          "date": "2021",
+          "rate": 4.5,
+          "video": "https://www.youtube.com/watch?v=9Ac-PGCfxFE",
+          "image": "https://upload.wikimedia.org/wikipedia/en/0/0e/The_Legend_of_Zelda_Twilight_Princess_Game_Cover.jpg"
+        },
+        {
+          "id_game": "19",
+          "name": "Octopath Traveler",
+          "genre": "Adventure",
+          "description": "Embark on an epic journey across the vast continent of Orsterra, where eight travelers with their own unique abilities and stories intersect in a beautiful pixel art world.",
+          "price": 59.99,
+          "date": "2018",
+          "rate": 4.7,
+          "video": "https://www.youtube.com/watch?v=Fmi8KrntszI",
+          "image": "https://upload.wikimedia.org/wikipedia/en/3/34/Octopath_Traveler.jpg"
+        },
+        {
+          "id_game": "20",
+          "name": "Donkey Kong Country: Tropical Freeze",
+          "genre": "Platformer",
+          "description": "Join Donkey Kong and his friends on a treacherous adventure to reclaim their island from the invading Snowmads in this challenging and beautifully crafted platformer.",
+          "price": 59.99,
+          "date": "2018",
+          "rate": 4.6,
+          "video": "https://www.youtube.com/watch?v=_5p0SiWHwvw",
+          "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/DKC5_box_art.jpg/220px-DKC5_box_art.jpg"
+        }
+      ] 
+  
+}
+
+
+
+

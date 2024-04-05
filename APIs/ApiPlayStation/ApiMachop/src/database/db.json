@@ -1,0 +1,191 @@
+{
+  "games":[
+    {
+      "id_game": "1",
+      "name": "The Last of Us Part II",
+      "genre": "Adventure",
+      "description": "The Last of Us Part II is a action-adventure game developed by Naughty Dog and published by Sony Interactive Entertainment. It is the sequel to 2013's The Last of Us. Set five years after the events of The Last of Us, players control 19-year-old Ellie who sets out for revenge and becomes involved in a conflict between her militia and a cult in a post-apocalyptic United States.",
+      "price": 59.99,
+      "date": "2020",
+      "rate": 4,
+      "video": "https://www.youtube.com/watch?v=qPNiIeKMHyg",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/TLOU_P2_Box_Art_2.png/220px-TLOU_P2_Box_Art_2.png"
+    },
+    {
+      "id_game": "2",
+      "name": "God of War",
+      "genre": "Action",
+      "description": "God of War es un juego de acción y aventuras desarrollado por Santa Monica Studio y publicado por Sony Interactive Entertainment. Presenta al antiguo guerrero espartano Kratos y a su hijo Atreus mientras viajan por los reinos de la mitología nórdica en una búsqueda personal.",
+      "price": 49.99,
+      "date": "2018",
+      "rate": 4,
+      "video": "https://youtu.be/1aDhfTGkLTg?si=bVq7wFSDBN-p-EZS",
+      "image": "https://upload.wikimedia.org/wikipedia/en/b/b5/God_of_War_%282005%29_cover.jpg"
+    },
+    {
+      "id_game": "3",
+      "name": "Gran Turismo Sport",
+      "genre": "Racing",
+      "description": "Gran Turismo Sport es un juego de carreras desarrollado por Polyphony Digital y publicado por Sony Interactive Entertainment. Ofrece una experiencia de conducción realista con una variedad de automóviles y pistas, y presenta modos en línea competitivos.",
+      "price": 39.99,
+      "date": "2017",
+      "rate": 4,
+      "video": "https://youtu.be/2h-Kycm8Jxo?si=ZC98lV9vKfPLLgLw",
+      "image": "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/10/11/15708027932536.jpg"
+    },
+    {
+      "id_game": "4",
+      "name": "Sackboy: A Big Adventure",
+      "genre": "Adventure",
+      "description": "Sackboy: A Big Adventure es un juego de plataformas de aventuras desarrollado por Sumo Digital y publicado por Sony Interactive Entertainment. En este juego, Sackboy emprende una aventura épica para detener al malvado Vex y salvar Craftworld. Con mundos coloridos, desafiantes niveles y modo cooperativo, es una experiencia divertida para toda la familia.",
+      "price": 39.99,
+      "date": "2017",
+      "rate": 4,
+      "video": "https://youtu.be/ZOk3fj5ujNM?si=WSQJxxOwnLuvezzM",
+      "image": "https://upload.wikimedia.org/wikipedia/en/b/bc/Sackboy_-_A_Big_Adventure_cover_art.jpg?20200925034001"
+    },
+    {
+      "id_game": "5",
+      "name": "Ratchet & Clank",
+      "genre": "Platform",
+      "description": "Ratchet & Clank es un juego de plataformas y acción donde Ratchet, un lombax mecánico, y Clank, un robot inteligente, luchan contra el presidente Drek. Con combate emocionante y una historia humorística, es divertido para todas las edades.",
+      "price": 39.99,
+      "date": "2016",
+      "rate": 4,
+      "video": "https://www.youtube.com/watch?v=BXIpHfcPhxM",
+      "image": "https://upload.wikimedia.org/wikipedia/en/3/37/Ratchet_and_Clank_cover.jpg?20210214053357"
+    },
+    {
+      "id_game": "6",
+      "name": "Dead Cells",
+      "genre": "Platform",
+      "description": "Dead Cells es un juego de acción y plataformas donde exploras un castillo en constante cambio, luchando contra enemigos y jefes desafiantes. Con una jugabilidad frenética y una estética única, ofrece una experiencia emocionante para los amantes del género.",
+      "price": 19.99,
+      "date": "2018",
+      "rate": 4,
+      "video": "https://youtu.be/gX4cGcwmdsY?si=i2DYeuWV6LOa2VYY",
+      "image": "https://upload.wikimedia.org/wikipedia/en/1/1f/Dead_cells_cover_art.png?20211113000155"
+    },
+    {
+      "id_game": "7",
+      "name": "Celeste",
+      "genre": "Platform",
+      "description": "Celeste es un juego de plataformas desafiante que sigue a Madeline en su viaje para escalar la montaña Celeste. Con una historia emotiva, controles precisos y niveles ingeniosamente diseñados, ofrece una experiencia gratificante para los amantes de los juegos de plataformas.",
+      "price": 19.99,
+      "date": "2018",
+      "rate": 4,
+      "video": "https://youtu.be/70d9irlxiB4?si=KlyHhoip4cWHl6XE",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Celeste_box_art_cropped.png/517px-Celeste_box_art_cropped.png"
+    },
+    {
+      "id_game": "9",
+      "name": "Goat Simulator 3",
+      "genre": "Simulation",
+      "description": "Goat Simulator 3 te lleva a una experiencia absurdamente realista (al menos, en el mundo de las cabras). Regresa como la protagonista femenina, Pilgor, en la isla ficticia de San Angora. Lame, embiste y arruina todo a tu paso en este mundo abierto, ¡siempre siendo una cabra! Invita hasta tres amigos para crear caos en el modo cooperativo local o compite en minijuegos. ¡Sé la cabra de tus sueños!",
+      "price": 29.99,
+      "date": "17 de noviembre de 2022",
+      "rate": 4,
+      "video": "https://youtu.be/-t0VIf0GAl8?si=h6NUGtPSZFtZVoIU",
+      "image": "https://upload.wikimedia.org/wikipedia/en/0/09/Goat_Simulator_3_cover_art.png"
+    },
+    {
+      "id_game": "10",
+      "name": "KartRider: Drift",
+      "genre": "Racing",
+      "description": "KartRider: Drift es un emocionante juego de carreras que te sumerge en una experiencia llena de velocidad y diversión. Personaliza tu kart y compite en emocionantes pistas llenas de desafíos.",
+      "price": 0,
+      "date": "2023",
+      "rate": 4,
+      "video": "https://youtu.be/mr8oO7aHg2g?si=S21CiQc6-JCP6rkF",
+      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/e90fea89707055.5dfd0f95a0f94.jpeg"
+    },
+    {
+      "id_game": "11",
+      "name": "Tony Hawk's Pro Skater 1 + 2",
+      "genre": "Sports",
+      "description": "Tony Hawk's Pro Skater 1 + 2 trae de vuelta la icónica serie de skateboarding con una emocionante remasterización de los primeros dos juegos. Experimenta la nostalgia de los clásicos mientras realizas trucos épicos en lugares emblemáticos.",
+      "price": 39.99,
+      "date": "2020",
+      "rate": 4,
+      "video": "https://youtu.be/4paYDD0WIVY?si=1KCN9IKz-GD6sPYp",
+      "image": "https://upload.wikimedia.org/wikipedia/en/8/8f/Tony_Hawk_Pro_Skater_Remaster_cover_art.png"
+    },
+    {
+      "id_game": "12",
+      "name": "Madden NFL 24",
+      "genre": "Sports",
+      "description": "¡Prepárate para dominar el campo de juego con más control y realismo en Madden NFL 24! Desarrollado por EA Tiburon y publicado por EA Sports, este emocionante juego de fútbol americano ofrece una experiencia mejorada con características como FieldSENSE™ y Tecnología SAPIEN. Conéctate con jugadores en PlayStation®5, Xbox Series X|S y PC con juego cruzado. La estrella de los Buffalo Bills, Josh Allen, adorna la portada del juego. ¡No te pierdas la acción por solo $29.99!",
+      "price": 29.99,
+      "date": "18 de agosto de 2023",
+      "rate": 0,
+      "video": "https://youtu.be/A90no77mOdQ?si=zC-HT4T6Y8lwolNM",
+      "image": "https://upload.wikimedia.org/wikipedia/en/b/b0/Madden_NFL_24_Cover.jpeg"
+    },
+    {
+    "id_game": "13",
+    "name": "Fortnite",
+    "genre": "Battle Royale",
+    "description": "¡Sumérgete en la acción trepidante de Fortnite, donde tendrás que enfrentarte a otros jugadores en una isla en constante cambio! Desarrollado por Epic Games, Fortnite ofrece un estilo artístico único, mecánicas de construcción y emocionantes eventos en línea. ¡Forma equipo con amigos, construye fortalezas y sé el último en pie para ganar la partida!",
+    "price": 0,
+    "date": "Lanzamiento: 25 de julio de 2017",
+    "rate": 4,
+    "video": "https://youtu.be/aOAiUwz7Zt8?si=SuLMSa4FB0FdLal-",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Fortnite_Save_The_World.jpg/220px-Fortnite_Save_The_World.jpg"
+  },
+  {
+    "id_game": "14",
+    "name": "Apex Legends",
+    "genre": "Battle Royale",
+    "description": "¡Prepárate para un combate intenso y táctico en Apex Legends, donde legendarios combatientes se enfrentan en un campo de batalla futurista! Desarrollado por Respawn Entertainment, este juego de disparos en primera persona ofrece un elenco diverso de personajes con habilidades únicas, comunicación de equipo fluida y un sistema de ping revolucionario. ¡Únete a la batalla, demuestra tus habilidades y sé el último escuadrón en pie!",
+    "price": 0,
+    "date": "Lanzamiento: 4 de febrero de 2019",
+    "rate": 4,
+    "video": "https://youtu.be/JtyJA36LzTw",
+    "image": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg"
+  },
+  {
+  "id_game": "15",
+  "name": "Cities: Skylines",
+  "genre": "Sandbox",
+  "description": "¡Conviértete en el alcalde definitivo en Cities: Skylines! Desarrollado por Colossal Order, este simulador de construcción de ciudades te permite diseñar, construir y gestionar tu propia metrópolis desde cero. Desde la planificación de zonas residenciales y comerciales hasta la gestión de transporte y servicios públicos, cada decisión afecta el crecimiento y la prosperidad de tu ciudad. Con mapas expansivos, una amplia gama de opciones de personalización y una comunidad activa de modders, ¡las posibilidades son infinitas para crear la ciudad de tus sueños!",
+  "price": 29.99,
+  "date": "2015",
+  "rate": 4,
+  "video": "https://youtu.be/AqzMjzQ9pH4?si=3MZZN9ieSa72Lymh",
+  "image": "https://upload.wikimedia.org/wikipedia/en/5/58/Cities_Skylines_cover_art.jpg"
+  },
+  {
+  "id_game": "16",
+  "name": "Minecraft",
+  "genre": "Sandbox, Survival",
+  "description": "¡Explora un mundo infinito de creatividad y aventura en Minecraft! Desarrollado por Mojang Studios, este juego te permite construir, explorar y sobrevivir en un mundo generado procedimentalmente lleno de bloques. Desde la construcción de simples chozas hasta la creación de impresionantes ciudades, todo es posible en este universo pixelado. Enfréntate a peligros como monstruos y exploradores en busca de tesoros, o únete a amigos en emocionantes aventuras cooperativas. ¡Sumérgete en la experiencia de Minecraft y deja volar tu imaginación!",
+  "price": 26.95,
+  "date": "Lanzamiento: 18 de noviembre de 2011",
+  "rate": 4,
+  "video": "https://youtu.be/9B48ZhOCJIg?si=SQyIPVKsIP9FTqVi",
+  "image": "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png"
+},
+{
+"id_game": "19",
+"name": "Until Dawn",
+"genre": "Survival Horror",
+"description": "Prepárate para una experiencia escalofriante en Until Down, una obra maestra del horror de supervivencia desarrollada por Supermassive Games. Ambientado en un remoto refugio de montaña, el juego sigue a un grupo de amigos cuyas vidas están amenazadas por una presencia misteriosa. Mientras navegas por entornos aterradores y tomas decisiones cruciales, cada elección que hagas determinará quién sobrevive hasta el amanecer. Con su trama envolvente, personajes realistas y tensión atmosférica, Until Down ofrece una experiencia de horror realmente inolvidable.",
+"price": 24.99,
+"date": "2015",
+"rate": 4,
+"video": "https://youtu.be/_jjsyjbAOkc?si=mA719omv8Jh-sYdQ",
+"image": "https://upload.wikimedia.org/wikipedia/en/d/d7/Until_Dawn_cover_art.jpg"
+},
+{
+  "id_game": "20",
+  "name": "Outlast II",
+  "genre": "Horror",
+  "description": "Adéntrate en un viaje aterrador hacia lo desconocido en Outlast II, la secuela del aclamado juego de terror de supervivencia desarrollado por Red Barrels. Ambientado en un oscuro y retorcido paisaje rural, te enfrentarás a horrores inimaginables mientras buscas desentrañar los misterios de un culto siniestro. Equipado solo con una cámara y tus instintos, deberás sobrevivir a encuentros aterradores y resolver acertijos para desvelar la verdad oculta detrás de esta pesadilla. ¿Estás listo para desafiar tus límites en Outlast II?",
+  "price": 29.99,
+  "date": "Fecha de Lanzamiento: 25 de abril de 2017",
+  "rate": 4.6,
+  "video": "https://youtu.be/W73XZ1WHuLQ?si=hrWYG_OxLrmBj4f2",
+  "image": "https://upload.wikimedia.org/wikipedia/en/1/1b/Outlast2.png"
+}
+]
+}

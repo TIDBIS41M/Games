@@ -142,24 +142,24 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
       </section>
 
      
-  <div className='flex max-md:flex-wrap justify-center'>
+  <div className='flex flex-shrink flex-wrap justify-center'>
     <button onClick={() => filterByCompany('all')} className={`p-2 shadow ${selectedCompany === 'all' ? 'bg-purple-700' : 'bg-purple-500 hover:bg-purple-600 my-2'} text-white font-bold py-2 px-4 rounded mr-2`}>
   All
 </button>
 
-<button onClick={() => filterByCompany('steam')} className={`p-2 shadow-steam mr-2 ${selectedCompany === 'steam' ? 'bg-blue-700' : 'bg-blue-500 hover:bg-blue-600 max-md:w-1/3 my-2'}`}>
+<button onClick={() => filterByCompany('steam')} className={`p-2 shadow-steam mr-2 ${selectedCompany === 'steam' ? 'bg-blue-700' : 'bg-blue-500 hover:bg-blue-600 my-2'} max-md:w-1/3 `}>
   <img src="/images/steam.jpg" alt="steamBtn" />
 </button>
 
-<button onClick={() => filterByCompany('nintendo')} className={`p-2 shadow-nintendo mr-2 ${selectedCompany === 'nintendo' ? 'bg-red-700' : 'bg-red-500 hover:bg-red-600 my-2 max-md:w-1/3'}`}>
+<button onClick={() => filterByCompany('nintendo')} className={`p-2 shadow-nintendo mr-2 ${selectedCompany === 'nintendo' ? 'bg-red-700' : 'bg-red-500 hover:bg-red-600 my-2 '} max-md:w-1/3`}>
   <img src="/images/Nintendo.jpg" alt="nintendoBtn" />
 </button>
 
-<button onClick={() => filterByCompany('play')} className={`p-2 shadow-playstation mr-2 ${selectedCompany === 'play' ? 'bg-slate-700' : 'bg-slate-500 hover:bg-slate-600 my-2 max-md:w-1/3'}`}>
+<button onClick={() => filterByCompany('play')} className={`p-2 shadow-playstation mr-2 ${selectedCompany === 'play' ? 'bg-slate-700' : 'bg-slate-500 hover:bg-slate-600 my-2'} max-md:w-1/3`}>
   <img src="/images/ps.jpg" alt="playBtn" />
 </button>
 
-<button onClick={() => filterByCompany('xbox')} className={`p-2 shadow-xbox ${selectedCompany === 'xbox' ? 'bg-green-700' : 'bg-green-500 hover:bg-green-600 max-md:w-1/3 my-2'}`}>
+<button onClick={() => filterByCompany('xbox')} className={`p-2 shadow-xbox ${selectedCompany === 'xbox' ? 'bg-green-700' : 'bg-green-500 hover:bg-green-600 my-2'} max-md:w-1/3`}>
   <img src="/images/xbox.jpg" alt="xboxBtn" />
 </button>
 
@@ -181,7 +181,7 @@ const Filter = ({ games, gamesSteam, gamesNintendo, gamesPlay, gamesXbox }) => {
           </div>
         </>
       ) : (
-        <div className="grid max-md:grid-flow-row max-md:grid-cols-2 max-md:m-5 md:grid-cols-4 gap-12 mt-10 mx-12">
+        <div className="grid max-md:grid-flow-row max-[400px]:grid-cols-1 max-md:grid-cols-2 sm max-md:m-5 md:gf md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 mt-10 mx-12">
           {/* Renderizar cartas de juego si hay juegos */}
           {filteredGames.map((game, index) => (
             <GameCard key={index} game={game} />

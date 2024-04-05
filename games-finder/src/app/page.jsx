@@ -6,10 +6,10 @@ import Header from "./components/Header";
 
 
 export default async function Home() {
-  const steamUrl = "http://10.100.0.133:3000/steam"
-  const xboxUrl = "http://10.100.1.62:3000/xbox"
-  const psUrl = "http://10.100.0.74:3000/ps"
-  const nintendoUrl = "http://10.100.1.65:3000/nintendo"
+  const steamUrl = "http://192.168.100.13:3000/ps"
+  const xboxUrl = "http://192.168.100.13:3000/ps"
+  const psUrl = "http://192.168.100.13:3000/ps"
+  const nintendoUrl = "http://192.168.100.13:3000/ps"
   
   const responseSteam = await fetch(steamUrl, {
     method: 'GET',
@@ -65,21 +65,12 @@ export default async function Home() {
     
   const games = [...gamesSteam, ...gamesNintendo, ...gamesPlay, ...gamesXbox]; 
   return (
-    <main className="grid w-full  pt-36 pb-28">
+    <main className="grid w-full bg- pt-36 pb-28">
+      <Header/>
       <section id="section1" className=" mb-[90px]"></section>
-    <Header />
       <div className="grid md:grid-cols-2 max-md:flex max-md:flex-col justify-end max-md:justify-center items-center h-full grid-flow-col ">
         <div className="flex max-md:px-10 h-full text-left text-[4rem] max-md:h-[20rem] max-md:text-5xl items-center justify-center md:pl-20 max-md:bg-none bg-[url('/images/purpleblur.png')] bg-cover bg-center bg-no-repeat text-white">
           <p className="text-center">Universe of games, at the tap of your finger</p>
-        </div>
-        <div className="grid grid-flow-row absolute z-10">
-          <div className="">
-            <img src="/images/greenblur.png" alt="" className="w-1/3 translate-x-[45rem] -translate-y-8 max-md:hidden" />
-          </div>
-          <div className="flex">
-            <img src="/images/redblur (1).png" alt="" className="w-1/3 translate-x-[35rem] -translate-y-36 max-md:hidden"/>
-            <img src="/images/Blue-Glow-Transparent.png" alt="" className="w-1/3 translate-x-[25rem] -translate-y-36 max-md:hidden"/>
-          </div>
         </div>
         <div className="w-full max-md:-z-10 md:z-20">
           <img
@@ -89,12 +80,21 @@ export default async function Home() {
             alt="HoloGirl"
             className="max-md:absolute w-10/12 max-md:top-32 max-md:left-0 max-md:right-0 max-md:opacity-50 mx-auto max-md:w-3/4"
           />
+          <div className="grid grid-flow-row absolute max-lg:hidden top-0 -z-10 ">
+          <div className="">
+            <img src="/images/greenblur.png" alt="" className="w-full max-md:hidden" />
+          </div>
+          <div className="grid absolute -bottom-96 grid-flow-col">
+            <img src="/images/redblur (1).png" alt="" className="w-full  max-md:hidden"/>
+            <img src="/images/Blue-Glow-Transparent.png" alt="" className="w-full -translate-y-6  max-md:hidden"/>
+          </div>
+        </div>
         </div>
       </div>
 
       <section id="section3"></section>
-          <h1 className="text-[47px] text-white font-bold text-center max-md:mb-12 md:mb-[140px] max-md:text-3xl mt-7" >Explore Our Featured Platforms</h1>
-          <div className="flex justify-evenly items-center max-md:h-[100px] bg-[#292929ff] bg-no-repeat rounded-[20px] h-[183px] ml-[15px] mr-[15px]">       
+          <h1 className="text-[47px] max-md:pt-24 text-white font-bold text-center max-md:mb-12 md:mb-[140px] max-sm:hidden md:text-3xl mt-7" >Explore Our Featured Platforms</h1>
+          <div className="flex justify-evenly items-center bg-no-repeat rounded-[20px] max-sm:hidden h-[183px] ml-[15px] mr-[15px]">       
               <div className="flex max-md:w-1/4 max-md:h-1/2 justify-center items-center w-[250px]  h-[320px] rounded-[34px]
                           bg-gradient-to-t from-[#b3b3b3ff] to-[#fff]
                           shadow-ps">
